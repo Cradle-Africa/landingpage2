@@ -1,21 +1,30 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Toaster } from "sonner";
+import { DM_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "BigCradle - Company Landing Page",
-  description: "Company landing page built with Next.js",
+  title: "BigCradle — The Intelligence Engine for Teams",
+  description:
+    "BigCradle connects your team with the infrastructure they need to build, ship, and scale — faster than ever before.",
+  keywords: ["BigCradle", "teams", "infrastructure", "intelligence engine", "collaboration"],
+  openGraph: {
+    title: "BigCradle — The Intelligence Engine for Teams",
+    description:
+      "Connect your team with the infrastructure they need to build, ship, and scale.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -25,11 +34,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${dmSans.variable} ${poppins.variable} font-sans antialiased`}>
         {children}
-        <Toaster position="top-right" richColors />
       </body>
     </html>
   );

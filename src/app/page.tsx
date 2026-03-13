@@ -1,10 +1,10 @@
 import { BackgroundDecor } from "@/components/shared/BackgroundDecor";
 import { Hero } from "@/components/sections/Hero";
-import { Story } from "@/components/sections/Story";
-import { Services } from "@/components/sections/Services";
-import { HowItWorks } from "@/components/sections/HowItWorks";
-import { StartSurvey } from "@/components/sections/StartSurvey";
-import { GetStarted } from "@/components/sections/GetStarted";
+import { Partners } from "@/components/sections/Partners";
+import { Solutions } from "@/components/sections/Solutions";
+import { SolutionsTabs } from "@/components/sections/SolutionsTabs";
+import { Results } from "@/components/sections/Results";
+import { Trust } from "@/components/sections/Trust";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -13,11 +13,11 @@ export default function Home() {
       <BackgroundDecor />
       <main className="relative z-10 font-sans overflow-x-hidden">
         <Hero />
-        <Story />
-        <Services />
-        <HowItWorks />
-        <StartSurvey />
-        <GetStarted />
+        <Partners />
+        <Solutions />
+        <SolutionsTabs />
+        <Results />
+        <Trust />
       </main>
       <Footer />
     </div>

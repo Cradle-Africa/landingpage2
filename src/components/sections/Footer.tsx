@@ -1,5 +1,6 @@
+"use client";
+
 import React from 'react';
-import { Logo } from "@/components/shared/Logo";
 
 /**
  * Footer component
@@ -7,133 +8,291 @@ import { Logo } from "@/components/shared/Logo";
  */
 export function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden bg-[#FAFBFF] pt-[80px] pb-[42px]">
-      {/* Primary footer layout */}
-      <div 
-        className="relative mx-auto flex w-full max-w-[1240px] flex-row items-start justify-between px-4"
-        style={{ gap: '160px' }}
+    <footer 
+      style={{
+        width: '100%',
+        height: '454px',
+        background: '#001A30',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        position: 'relative',
+        margin: '0 auto',
+        flex: 'none',
+        order: 8,
+        flexGrow: 0,
+        overflow: 'hidden'
+      }}
+    >
+      {/* Main Content - Frame 193 */}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'flex-start',
+          padding: '0px',
+          gap: '160px',
+          position: 'absolute',
+          width: '1240px',
+          maxWidth: '90%',
+          height: '186px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          top: '80px',
+        }}
       >
-        {/* Company logo and mission */}
-        <div className="flex w-[400px] flex-col items-start gap-2">
-          <div className="relative h-[64px] w-full">
-            <div className="absolute top-1/2 left-0 -translate-y-1/2">
-              <Logo />
-            </div>
+        {/* Company Column - Frame 181 */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            padding: '0px',
+            gap: '8px',
+            width: '400px',
+            height: '93px',
+            flex: 'none',
+            order: 0,
+            flexGrow: 0,
+          }}
+        >
+          {/* Logo - Frame Company */}
+          <div style={{ width: '400px', height: '64px', position: 'relative', flex: 'none', order: 0, alignSelf: 'stretch', flexGrow: 0 }}>
+             <img 
+               src="/footerlogo.png" 
+               alt="BigCradle Logo" 
+               style={{ 
+                 position: 'absolute', 
+                 width: '160.87px', 
+                 height: '37px', 
+                 left: '0px', 
+                 top: 'calc(50% - 37px/2 + 1px)' 
+               }} 
+             />
           </div>
-          <p className="w-full font-poppins text-[14px] font-normal leading-[21px] tracking-[0.01em] text-[#676767]">
+          <p
+            style={{
+              width: '400px',
+              height: '21px',
+              fontFamily: 'Poppins',
+              fontWeight: 400,
+              fontSize: '14px',
+              lineHeight: '21px',
+              letterSpacing: '0.01em',
+              color: '#676767',
+              margin: 0,
+              flex: 'none',
+              order: 1,
+              alignSelf: 'stretch',
+              flexGrow: 0,
+            }}
+          >
             African Consumer Insights. Delivered. Executed.
           </p>
         </div>
 
-        {/* Contact and address column */}
-        <div className="flex w-[356px] flex-col items-start gap-5">
-          {/* Column title */}
-          <div className="flex flex-col items-start gap-1">
-            <h3 className="font-poppins text-[20px] font-medium leading-[30px] tracking-[0.01em] text-[#000000]">
+        {/* Contact Us Column - Frame 189 */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            padding: '0px',
+            gap: '20px',
+            width: '356px',
+            height: '186px',
+            flex: 'none',
+            order: 1,
+            flexGrow: 0,
+          }}
+        >
+          {/* Header - Frame 182 */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0px', width: '114px', height: '38px', flex: 'none', order: 0, flexGrow: 0 }}>
+            <h5 style={{ width: '114px', height: '30px', fontFamily: 'Poppins', fontWeight: 500, fontSize: '20px', lineHeight: '30px', letterSpacing: '0.01em', color: '#FFFFFF', margin: 0 }}>
               Contact Us
-            </h3>
-            {/* Vector 1 - Custom Path Implementation */}
-            <svg width="102" height="10" viewBox="0 0 102 10" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-none order-1">
-              <path d="M1 2.14826C1.15865 2.14826 1.31731 2.14826 6.31731 2.14826C11.3173 2.14826 21.1538 2.14826 26.9351 2.08868C34.1475 2.01435 40.375 1.78716 48.1418 1.668C52.2862 1.60442 54.0385 0.94581 54.6034 1.00359C57.6588 1.31608 48.9327 3.82375 45.3245 5.45229C43.5561 6.25044 41.5577 7.43832 39.3966 8.5198C38.4799 8.97857 38.0288 9.36296 46.113 8.41508C54.1971 7.4672 70.8558 5.20313 80.1514 4.03679C90.875 2.87045 93.4567 2.75129 96.012 2.57074C97.4567 2.50936 99.2019 2.50936 101 2.50936" stroke="#3C6FE3" strokeWidth="2" strokeLinecap="round"/>
+            </h5>
+            <svg width="102" height="10" viewBox="0 0 102 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 2.14777C1.15865 2.14777 1.31731 2.14777 6.31731 2.14777C11.3173 2.14777 21.1538 2.14777 26.9351 2.08819C34.1475 2.01386 40.375 1.78668 48.1418 1.66751C52.2862 1.60393 54.0385 0.945322 54.6034 1.0031C57.6588 1.3156 48.9327 3.82326 45.3245 5.4518C43.5561 6.24996 41.5577 7.43783 39.3966 8.51931C38.4799 8.97808 38.0288 9.36247 46.113 8.41459C54.1971 7.46672 70.8558 5.20264 80.1514 4.0363C90.875 2.86996 93.4567 2.7508 96.012 2.57025C97.4567 2.50887 99.2019 2.50887 101 2.50887" stroke="#3C6FE3" strokeWidth="2" strokeLinecap="round"/>
             </svg>
           </div>
 
-          {/* Details */}
-          <div className="flex w-full flex-col items-start gap-4">
-            {/* ... phone, email, address remain same ... */}
-            <div className="flex w-full flex-row items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F7F7F7]">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="stroke-[#141B34]">
-                  <path d="M1 1L11 11M1 11L11 1" strokeWidth="1.5" strokeLinecap="round" />
+          {/* Details - Frame 188 */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', padding: '0px', gap: '16px', width: '356px', height: '128px', flex: 'none', order: 1, alignSelf: 'stretch', flexGrow: 0 }}>
+            {/* Phone - Frame 187 */}
+            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '0px', gap: '8px', width: '356px', height: '32px', flex: 'none', order: 0, alignSelf: 'stretch', flexGrow: 0 }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2px', width: '32px', height: '32px', background: '#F7F7F7', borderRadius: '32px', flex: 'none', order: 0, flexGrow: 0 }}>
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 3L13 13M3 13L13 3" stroke="#141B34" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
               </div>
-              <span className="font-poppins text-[16px] font-normal leading-[24px] tracking-[0.01em] text-[#000000]">
+              <span style={{ width: '312px', height: '24px', fontFamily: 'Poppins', fontWeight: 400, fontSize: '16px', lineHeight: '24px', letterSpacing: '0.01em', color: '#FFFFFF' }}>
                 +250 796-338-327, +234 816-433-8001
               </span>
             </div>
 
-            <div className="flex w-full flex-row items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F7F7F7]">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="stroke-[#141B34]">
-                  <path d="M1 3.5L6 7L11 3.5M1.5 2.5H10.5C11.0523 2.5 11.5 2.94772 11.5 3.5V8.5C11.5 9.05228 11.0523 9.5 10.5 9.5H1.5C0.947715 9.5 0.5 9.05228 0.5 8.5V3.5C0.5 2.94772 0.947715 2.5 1.5 2.5Z" strokeWidth="1.5" />
+            {/* Email - Frame 186 */}
+            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '0px', gap: '8px', width: '186px', height: '32px', flex: 'none', order: 1, flexGrow: 0 }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2px', width: '32px', height: '32px', background: '#F7F7F7', borderRadius: '32px', flex: 'none', order: 0, flexGrow: 0 }}>
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 4L8 8L14 4M2 12V4H14V12H2Z" stroke="#141B34" strokeWidth="1.5" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="font-poppins text-[16px] font-normal leading-[24px] tracking-[0.01em] text-[#000000]">
+              <span style={{ width: '146px', height: '24px', fontFamily: 'Poppins', fontWeight: 400, fontSize: '16px', lineHeight: '24px', letterSpacing: '0.01em', color: '#FFFFFF' }}>
                 big@cradle.africa
               </span>
             </div>
 
-            <div className="flex w-full flex-row items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F7F7F7]">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="stroke-[#141B34]">
-                  <path d="M6 11L1.5 6.5C0.5 5.5 0.5 4 1.5 3C2.5 2 4 2 5 3L6 4L7 3C8 2 9.5 2 10.5 3C11.5 4 11.5 5.5 10.5 6.5L6 11Z" strokeWidth="1.5" />
+            {/* Location - Frame 184 */}
+            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '0px', gap: '8px', width: '321px', height: '32px', flex: 'none', order: 2, flexGrow: 0 }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2px', width: '32px', height: '32px', background: '#F7F7F7', borderRadius: '32px', flex: 'none', order: 0, flexGrow: 0 }}>
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 14C8 14 3 9.5 3 6C3 3.23858 5.23858 1 8 1C10.7614 1 13 3.23858 13 6C13 9.5 8 14 8 14Z" stroke="#141B34" strokeWidth="1.5"/>
+                  <circle cx="8" cy="6" r="1.5" stroke="#141B34" strokeWidth="1.5"/>
                 </svg>
               </div>
-              <span className="font-poppins text-[16px] font-normal leading-[24px] tracking-[0.01em] text-[#000000]">
+              <span style={{ width: '281px', height: '24px', fontFamily: 'Poppins', fontWeight: 400, fontSize: '16px', lineHeight: '24px', letterSpacing: '0.01em', color: '#FFFFFF' }}>
                 Nyakabanda, KK 114 Kigali, Rwanda
               </span>
             </div>
           </div>
         </div>
 
-        {/* Follow Us Column */}
-        <div className="flex w-[164px] flex-col items-start gap-5">
-          <div className="flex flex-col items-start gap-1">
-            <h3 className="font-poppins text-[20px] font-medium leading-[30px] tracking-[0.01em] text-[#000000]">
+        {/* Follow Us Column - Frame 192 */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            padding: '0px',
+            gap: '20px',
+            width: '164px',
+            height: '90px',
+            flex: 'none',
+            order: 2,
+            flexGrow: 0,
+          }}
+        >
+          {/* Header - Frame 191 */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', padding: '0px', width: '100px', height: '38px', flex: 'none', order: 0, flexGrow: 0 }}>
+            <h5 style={{ width: '100px', height: '30px', fontFamily: 'Poppins', fontWeight: 500, fontSize: '20px', lineHeight: '30px', letterSpacing: '0.01em', color: '#FFFFFF', margin: 0 }}>
               Follow Us
-            </h3>
-            {/* Vector 1 - Custom Path Implementation */}
-            <svg width="102" height="10" viewBox="0 0 102 10" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-none order-1">
-              <path d="M1 2.14826C1.15865 2.14826 1.31731 2.14826 6.31731 2.14826C11.3173 2.14826 21.1538 2.14826 26.9351 2.08868C34.1475 2.01435 40.375 1.78716 48.1418 1.668C52.2862 1.60442 54.0385 0.94581 54.6034 1.00359C57.6588 1.31608 48.9327 3.82375 45.3245 5.45229C43.5561 6.25044 41.5577 7.43832 39.3966 8.5198C38.4799 8.97857 38.0288 9.36296 46.113 8.41508C54.1971 7.4672 70.8558 5.20313 80.1514 4.03679C90.875 2.87045 93.4567 2.75129 96.012 2.57074C97.4567 2.50936 99.2019 2.50936 101 2.50936" stroke="#3C6FE3" strokeWidth="2" strokeLinecap="round"/>
+            </h5>
+            <svg width="102" height="10" viewBox="0 0 102 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 2.14777C1.15865 2.14777 1.31731 2.14777 6.31731 2.14777C11.3173 2.14777 21.1538 2.14777 26.9351 2.08819C34.1475 2.01386 40.375 1.78668 48.1418 1.66751C52.2862 1.60393 54.0385 0.945322 54.6034 1.0031C57.6588 1.3156 48.9327 3.82326 45.3245 5.4518C43.5561 6.24996 41.5577 7.43783 39.3966 8.51931C38.4799 8.97857 38.0288 9.36247 46.113 8.41459C54.1971 7.46672 70.8558 5.20264 80.1514 4.0363C90.875 2.86996 93.4567 2.7508 96.012 2.57025C97.4567 2.50887 99.2019 2.50887 101 2.50887" stroke="#3C6FE3" strokeWidth="2" strokeLinecap="round"/>
             </svg>
           </div>
 
-          <div className="flex w-full flex-row items-center gap-3">
-            {/* X (Twitter) */}
-            <a href="#" className="transition-opacity hover:opacity-80">
+          {/* Social Icons - Frame 190 */}
+          <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '0px', gap: '12px', width: '164px', height: '32px', flex: 'none', order: 1, alignSelf: 'stretch', flexGrow: 0 }}>
+            {/* Icon 1 - X */}
+            <div style={{ cursor: 'pointer', flex: 'none', order: 0, flexGrow: 0 }}>
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="32" height="32" rx="16" fill="#F7F7F7"/>
                 <path d="M10 22L15.0323 16.9677M15.0323 16.9677L10 10H13.3333L16.9677 15.0323M15.0323 16.9677L18.6667 22H22L16.9677 15.0323M22 10L16.9677 15.0323" stroke="#141B34" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
-            {/* Instagram */}
-            <a href="#" className="transition-opacity hover:opacity-80">
-              <svg width="32" height="32" viewBox="44 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="44" width="32" height="32" rx="16" fill="#F7F7F7"/>
-                <path d="M53 16C53 12.7002 53 11.0503 54.0251 10.0251C55.0503 9 56.7002 9 60 9C63.2998 9 64.9497 9 65.9749 10.0251C67 11.0503 67 12.7002 67 16C67 19.2998 67 20.9497 65.9749 21.9749C64.9497 23 63.2998 23 60 23C56.7002 23 55.0503 23 54.0251 21.9749C53 20.9497 53 19.2998 53 16Z" stroke="#141B34" strokeLinejoin="round"/>
-                <path d="M63.3191 16.0013C63.3191 17.8326 61.8346 19.3171 60.0033 19.3171C58.172 19.3171 56.6875 17.8326 56.6875 16.0013C56.6875 14.1701 58.172 12.6855 60.0033 12.6855C61.8346 12.6855 63.3191 14.1701 63.3191 16.0013Z" stroke="#141B34"/>
-                <path d="M64.0604 11.9473H64.0547" stroke="#141B34" strokeLinecap="round" strokeLinejoin="round"/>
+            </div>
+            {/* Icon 2 - Instagram */}
+            <div style={{ cursor: 'pointer', flex: 'none', order: 1, flexGrow: 0 }}>
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#F7F7F7"/>
+                <path d="M9 16C9 12.7002 9 11.0503 10.0251 10.0251C11.0503 9 12.7002 9 16 9C19.2998 9 20.9497 9 21.9749 10.0251C23 11.0503 23 12.7002 23 16C23 19.2998 23 20.9497 21.9749 21.9749C20.9497 23 19.2998 23 16 23C12.7002 23 11.0503 23 10.0251 21.9749C9 20.9497 9 19.2998 9 16Z" stroke="#141B34" strokeLinejoin="round"/>
+                <path d="M19.3161 16.0004C19.3161 17.8316 17.8316 19.3161 16.0004 19.3161C14.1691 19.3161 12.6846 17.8316 12.6846 16.0004C12.6846 14.1691 14.1691 12.6846 16.0004 12.6846C17.8316 12.6846 19.3161 14.1691 19.3161 16.0004Z" stroke="#141B34"/>
+                <path d="M20.057 11.9475H20.0513" stroke="#141B34" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
-            {/* LinkedIn */}
-            <a href="#" className="transition-opacity hover:opacity-80">
-              <svg width="32" height="32" viewBox="88 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="88" width="32" height="32" rx="16" fill="#F7F7F7"/>
-                <path d="M100.312 14.5273V19.6852" stroke="#141B34" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M103.266 16.7379V19.6852M103.266 16.7379C103.266 15.517 104.255 14.5273 105.476 14.5273C106.697 14.5273 107.687 15.517 107.687 16.7379V19.6852M103.266 16.7379V14.5273" stroke="#141B34" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M100.318 12.3145H100.312" stroke="#141B34" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M97 16C97 12.7002 97 11.0503 98.0251 10.0251C99.0503 9 100.7 9 104 9C107.3 9 108.95 9 109.975 10.0251C111 11.0503 111 12.7002 111 16C111 19.2998 111 20.9497 109.975 21.9749C108.95 23 107.3 23 104 23C100.7 23 99.0503 23 98.0251 21.9749C97 20.9497 97 19.2998 97 16Z" stroke="#141B34" strokeLinejoin="round"/>
+            </div>
+            {/* Icon 3 - LinkedIn */}
+            <div style={{ cursor: 'pointer', flex: 'none', order: 2, flexGrow: 0 }}>
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#F7F7F7"/>
+                <path d="M12.3154 14.5269V19.6848" stroke="#141B34" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M15.2627 16.7374V19.6848M15.2627 16.7374C15.2627 15.5165 16.2523 14.5269 17.4732 14.5269C18.6941 14.5269 19.6837 15.5165 19.6837 16.7374V19.6848M15.2627 16.7374V14.5269" stroke="#141B34" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12.3211 12.3154H12.3154" stroke="#141B34" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M9 16C9 12.7002 9 11.0503 10.0251 10.0251C11.0503 9 12.7002 9 16 9C19.2998 9 20.9497 9 21.9749 10.0251C23 11.0503 23 12.7002 23 16C23 19.2998 23 20.9497 21.9749 21.9749C20.9497 23 19.2998 23 16 23C12.7002 23 11.0503 23 10.0251 21.9749C9 20.9497 9 19.2998 9 16Z" stroke="#141B34" strokeLinejoin="round"/>
               </svg>
-            </a>
-            {/* Facebook */}
-            <a href="#" className="transition-opacity hover:opacity-80">
-              <svg width="32" height="32" viewBox="132 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="132" width="32" height="32" rx="16" fill="#F7F7F7"/>
-                <path fillRule="evenodd" clipRule="evenodd" d="M143.844 14.8333C143.146 14.8333 143 14.9676 143 15.6111V16.7778C143 17.4213 143.146 17.5555 143.844 17.5555H145.532V22.2222C145.532 22.8657 145.678 23 146.377 23H148.065C148.763 23 148.909 22.8657 148.909 22.2222V17.5555H150.805C151.335 17.5555 151.471 17.4607 151.617 16.9915L151.978 15.8248C152.228 15.021 152.074 14.8333 151.167 14.8333H148.909V12.8889C148.909 12.4593 149.287 12.1111 149.753 12.1111H152.156C152.854 12.1111 153 11.9768 153 11.3333V9.77778C153 9.13429 152.854 9 152.156 9H149.753C147.422 9 145.532 10.7411 145.532 12.8889V14.8333H143.844Z" stroke="#141B34" strokeLinejoin="round"/>
+            </div>
+            {/* Icon 4 - Facebook */}
+            <div style={{ cursor: 'pointer', flex: 'none', order: 3, flexGrow: 0 }}>
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#F7F7F7"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M11.8442 14.8333C11.1458 14.8333 11 14.9676 11 15.6111V16.7778C11 17.4213 11.1458 17.5555 11.8442 17.5555H13.5325V22.2222C13.5325 22.8657 13.6782 23 14.3766 23H16.0649C16.7634 23 16.9091 22.8657 16.9091 22.2222V17.5555H18.8048C19.3345 17.5555 19.471 17.4607 19.6165 16.9915L19.9783 15.8248C20.2275 15.021 20.0739 14.8333 19.1666 14.8333H16.9091V12.8889C16.9091 12.4593 17.287 12.1111 17.7532 12.1111H20.1559C20.8542 12.1111 21 11.9768 21 11.3333V9.77778C21 9.13429 20.8542 9 20.1559 9H17.7532C15.4221 9 13.5325 10.7411 13.5325 12.8889V14.8333H11.8442Z" stroke="#141B34" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="relative mx-auto mt-[122px] flex w-full max-w-[1232px] flex-row items-center justify-between px-4">
-        <p className="font-poppins text-[14px] font-normal leading-[21px] tracking-[0.01em] text-[#92989F]">
+      {/* Bottom Bar - Frame 1 */}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '0px',
+          gap: '388px',
+          position: 'absolute',
+          width: '1232px',
+          maxWidth: '90%',
+          height: '24px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          top: '388px',
+        }}
+      >
+        <p
+          style={{
+            width: '422px',
+            height: '24px',
+            fontFamily: 'Poppins',
+            fontWeight: 400,
+            fontSize: '14px',
+            lineHeight: '21px',
+            letterSpacing: '0.01em',
+            color: '#92989F',
+            margin: 0,
+            flex: 'none',
+            order: 0,
+            flexGrow: 0,
+          }}
+        >
           &copy; {new Date().getFullYear()} BigCradle. All rights reserved.
         </p>
-        <div className="flex flex-row gap-8 font-poppins text-[14px] font-normal leading-[21px] tracking-[0.01em] text-[#92989F]">
-          <a href="#" className="hover:text-foreground">Privacy Policy</a>
-          <a href="#" className="hover:text-foreground">Terms of Service</a>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'flex-end',
+            gap: '32px',
+            width: '422px',
+            height: '24px',
+            flex: 'none',
+            order: 1,
+            flexGrow: 0,
+          }}
+        >
+          {['Privacy Policy', 'Terms of Service', 'Cookies'].map((link) => (
+            <a
+              key={link}
+              href="#"
+              style={{
+                fontFamily: 'Poppins',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                fontSize: '14px',
+                lineHeight: '21px',
+                textAlign: 'right',
+                letterSpacing: '0.01em',
+                color: '#92989F',
+                textDecoration: 'none',
+                cursor: 'pointer',
+                transition: 'color 0.2s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#92989F')}
+            >
+              {link}
+            </a>
+          ))}
         </div>
       </div>
     </footer>
