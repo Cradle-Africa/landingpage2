@@ -255,23 +255,30 @@ export const Results = () => {
                 <span style={{ fontFamily: 'Poppins', fontSize: '14px', color: '#676767' }}>one-time payment</span>
               </div>
               {/* CTA */}
-              <button
+              <a
+                href="https://app.bigcradle.com"
                 style={{
-                  width: '278px',
-                  height: '48px',
-                  background: 'linear-gradient(183.55deg, #578CFF 2.92%, #0546D2 97.08%)',
-                  borderRadius: '6px',
-                  border: 'none',
-                  color: 'white',
-                  fontFamily: 'Poppins',
-                  fontWeight: 500,
-                  fontSize: '14px',
-                  cursor: 'pointer',
+                  textDecoration: 'none',
                   marginTop: '16px'
                 }}
               >
-                Create account
-              </button>
+                <button
+                  style={{
+                    width: '278px',
+                    height: '48px',
+                    background: 'linear-gradient(183.55deg, #578CFF 2.92%, #0546D2 97.08%)',
+                    borderRadius: '6px',
+                    border: 'none',
+                    color: 'white',
+                    fontFamily: 'Poppins',
+                    fontWeight: 500,
+                    fontSize: '14px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Create account
+                </button>
+              </a>
             </motion.div>
 
             {/* Dark Card - Frame 163 */}
@@ -314,23 +321,30 @@ export const Results = () => {
                 <span style={{ fontFamily: 'Poppins', fontSize: '14px', color: '#979797' }}>one-time payment</span>
               </div>
               {/* CTA */}
-              <button
+              <a
+                href="https://app.bigcradle.com"
                 style={{
-                  width: '278px',
-                  height: '48px',
-                  background: '#F6F9FF',
-                  borderRadius: '6px',
-                  border: 'none',
-                  color: '#0027FF',
-                  fontFamily: 'Poppins',
-                  fontWeight: 500,
-                  fontSize: '14px',
-                  cursor: 'pointer',
+                  textDecoration: 'none',
                   marginTop: '16px'
                 }}
               >
-                Create account
-              </button>
+                <button
+                  style={{
+                    width: '278px',
+                    height: '48px',
+                    background: '#F6F9FF',
+                    borderRadius: '6px',
+                    border: 'none',
+                    color: '#0027FF',
+                    fontFamily: 'Poppins',
+                    fontWeight: 500,
+                    fontSize: '14px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Create account
+                </button>
+              </a>
             </motion.div>
           </div>
         </div>

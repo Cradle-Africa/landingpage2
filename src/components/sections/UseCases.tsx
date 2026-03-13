@@ -215,40 +215,47 @@ export const UseCases = () => {
           {/* CTA Button and Dot Container */}
           <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px' }}>
             {/* CTA Button - Medium btns */}
-            <button
+            <a
+              href="https://app.bigcradle.com"
               style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                padding: '12px 24px',
-                minWidth: '180px',
-                height: 'auto',
-                minHeight: '44px',
-                background: 'linear-gradient(90deg, #0546D2 0%, #94B2FF 50.42%, #0546D2 100%)',
-                borderRadius: '6px',
-                border: 'none',
-                cursor: 'pointer',
-                flex: 'none',
-                order: 0,
-                flexGrow: 0,
+                textDecoration: 'none'
               }}
             >
-              <span
+              <button
                 style={{
-                  fontFamily: 'Poppins',
-                  fontStyle: 'normal',
-                  fontWeight: 500,
-                  fontSize: '14px',
-                  lineHeight: '1',
-                  letterSpacing: '0.01em',
-                  color: '#FFFFFF',
-                  whiteSpace: 'nowrap'
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding: '12px 24px',
+                  minWidth: '180px',
+                  height: 'auto',
+                  minHeight: '44px',
+                  background: 'linear-gradient(90deg, #0546D2 0%, #94B2FF 50.42%, #0546D2 100%)',
+                  borderRadius: '6px',
+                  border: 'none',
+                  cursor: 'pointer',
+                  flex: 'none',
+                  order: 0,
+                  flexGrow: 0,
                 }}
               >
-                Create account
-              </span>
-            </button>
+                <span
+                  style={{
+                    fontFamily: 'Poppins',
+                    fontStyle: 'normal',
+                    fontWeight: 500,
+                    fontSize: '14px',
+                    lineHeight: '1',
+                    letterSpacing: '0.01em',
+                    color: '#FFFFFF',
+                    whiteSpace: 'nowrap'
+                  }}
+                >
+                  Create account
+                </span>
+              </button>
+            </a>
 
             {/* Decorative Dot */}
             <div 

@@ -80,7 +80,7 @@ export function GetStarted() {
           >
             {/* Play Store link */}
             <a 
-              href="#"
+              href="https://app.bigcradle.com"
               style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -106,7 +106,7 @@ export function GetStarted() {
 
             {/* App Store link */}
             <a 
-              href="#"
+              href="https://app.bigcradle.com"
               style={{
                 display: 'flex',
                 flexDirection: 'row',

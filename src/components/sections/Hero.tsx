@@ -181,7 +181,7 @@ export function Hero() {
         >
           {/* Log in */}
           <a
-            href="#"
+            href="https://app.bigcradle.com"
             style={{
               width: '42px',
               height: '21px',
@@ -203,8 +203,8 @@ export function Hero() {
             Log in
           </a>
 
-          {/* Create account btn */}
-          <div
+          <a
+            href="https://app.bigcradle.com"
             style={{
               display: 'flex',
               flexDirection: 'row',
@@ -221,6 +221,7 @@ export function Hero() {
               order: 1,
               flexGrow: 0,
               cursor: 'pointer',
+              textDecoration: 'none'
             }}
           >
             <span
@@ -241,7 +242,7 @@ export function Hero() {
             >
               Create account
             </span>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -323,7 +324,7 @@ export function Hero() {
           >
             {/* Primary CTA */}
             <a
-              href="#"
+              href="https://app.bigcradle.com"
               style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -348,7 +349,7 @@ export function Hero() {
 
             {/* Secondary CTA */}
             <a
-              href="#"
+              href="https://app.bigcradle.com"
               style={{
                 display: 'flex',
                 flexDirection: 'row',

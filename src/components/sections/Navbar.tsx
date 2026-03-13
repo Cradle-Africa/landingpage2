@@ -48,7 +48,7 @@ export function Navbar() {
       {/* Action buttons (Sign up/Create account) */}
       <div className="ml-auto flex flex-row items-center lg:ml-0 lg:flex">
         <a
-          href="#"
+          href="https://app.bigcradle.com"
           className="flex h-[40px] w-[160px] flex-row items-center justify-center gap-[12px] rounded-[6px] border border-[#0067C7] bg-[#0D8AFF] p-0 transition-all hover:bg-[#0B7AE6] hover:shadow-lg"
         >
           <span className="w-[113px] text-center font-poppins text-[14px] font-medium leading-[21px] tracking-[0.01em] text-white">

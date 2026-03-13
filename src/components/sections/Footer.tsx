@@ -273,7 +273,7 @@ export function Footer() {
           {['Privacy Policy', 'Terms of Service', 'Cookies'].map((link) => (
             <a
               key={link}
-              href="#"
+              href="https://app.bigcradle.com"
               style={{
                 fontFamily: 'Poppins',
                 fontStyle: 'normal',

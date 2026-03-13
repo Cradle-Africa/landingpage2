@@ -222,40 +222,47 @@ export const SolutionsTabs = () => {
           </div>
 
           {/* Button - Medium btns */}
-          <button
+          <a
+            href="https://app.bigcradle.com"
             style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-              padding: '0px',
-              gap: '12px',
-              width: '180px',
-              height: '40px',
-              background: 'linear-gradient(90deg, #0546D2 0%, #94B2FF 50.42%, #0546D2 100%)',
-              borderRadius: '6px',
-              border: 'none',
-              cursor: 'pointer',
-              flex: 'none',
-              order: 1,
-              flexGrow: 0,
+              textDecoration: 'none'
             }}
           >
-            <span
+            <button
               style={{
-                width: '139px',
-                height: '21px',
-                fontFamily: 'Poppins',
-                fontWeight: 500,
-                fontSize: '14px',
-                lineHeight: '21px',
-                letterSpacing: '0.01em',
-                color: '#FFFFFF',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: '0px',
+                gap: '12px',
+                width: '180px',
+                height: '40px',
+                background: 'linear-gradient(90deg, #0546D2 0%, #94B2FF 50.42%, #0546D2 100%)',
+                borderRadius: '6px',
+                border: 'none',
+                cursor: 'pointer',
+                flex: 'none',
+                order: 1,
+                flexGrow: 0,
               }}
             >
-              Create account
-            </span>
-          </button>
+              <span
+                style={{
+                  width: '139px',
+                  height: '21px',
+                  fontFamily: 'Poppins',
+                  fontWeight: 500,
+                  fontSize: '14px',
+                  lineHeight: '21px',
+                  letterSpacing: '0.01em',
+                  color: '#FFFFFF',
+                }}
+              >
+                Create account
+              </span>
+            </button>
+          </a>
         </div>
 
         {/* Dynamic Image Container */}
