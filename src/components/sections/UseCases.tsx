@@ -1,11 +1,11 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
 
 export const UseCases = () => {
   return (
     <section
+      id="use-cases"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -61,20 +61,12 @@ export const UseCases = () => {
             overflow: 'hidden'
           }}
         >
-          {/* Group 63 - Image positions with Shuffle Animation */}
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+          {/* Group 63 - Image positions */}
+          <div 
             style={{ position: 'relative', width: '606px', height: '559px', flex: 'none', order: 0, flexGrow: 0 }}
           >
             {/* usecase1.png */}
-            <motion.div
-              variants={{
-                hidden: { x: -50, y: -50, opacity: 0, rotate: -5 },
-                visible: { x: 0, y: 0, opacity: 1, rotate: 0 }
-              }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+            <div
               style={{
                 position: 'absolute',
                 width: '291px',
@@ -90,12 +82,7 @@ export const UseCases = () => {
               }}
             />
             {/* usecase2.png */}
-            <motion.div
-              variants={{
-                hidden: { x: 100, y: 50, opacity: 0, rotate: 10 },
-                visible: { x: 0, y: 0, opacity: 1, rotate: 0 }
-              }}
-              transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
+            <div
               style={{
                 position: 'absolute',
                 width: '291px',
@@ -111,12 +98,7 @@ export const UseCases = () => {
               }}
             />
             {/* usecase3.png */}
-            <motion.div
-              variants={{
-                hidden: { x: -100, y: 100, opacity: 0, rotate: -10 },
-                visible: { x: 0, y: 0, opacity: 1, rotate: 0 }
-              }}
-              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
+            <div
               style={{
                 position: 'absolute',
                 width: '291px',
@@ -132,12 +114,7 @@ export const UseCases = () => {
               }}
             />
             {/* usecase4.png */}
-            <motion.div
-              variants={{
-                hidden: { x: 150, y: -20, opacity: 0, scale: 0.8 },
-                visible: { x: 0, y: 0, opacity: 1, scale: 1 }
-              }}
-              transition={{ duration: 0.7, ease: "backOut", delay: 0.3 }}
+            <div
               style={{
                 position: 'absolute',
                 width: '120px',
@@ -153,12 +130,7 @@ export const UseCases = () => {
               }}
             />
             {/* usecase5.png */}
-            <motion.div
-              variants={{
-                hidden: { y: -100, opacity: 0 },
-                visible: { y: 0, opacity: 1 }
-              }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            <div
               style={{
                 position: 'absolute',
                 width: '120px',
@@ -173,7 +145,7 @@ export const UseCases = () => {
                 boxShadow: '0px 10px 20px rgba(0,0,0,0.1)'
               }}
             />
-          </motion.div>
+          </div>
         </div>
 
         {/* Text Content - Frame 1618868695 */}
@@ -243,9 +215,7 @@ export const UseCases = () => {
           {/* CTA Button and Dot Container */}
           <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px' }}>
             {/* CTA Button - Medium btns */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -276,9 +246,9 @@ export const UseCases = () => {
                   whiteSpace: 'nowrap'
                 }}
               >
-                Request API Access
+                Create account
               </span>
-            </motion.button>
+            </button>
 
             {/* Decorative Dot */}
             <div 

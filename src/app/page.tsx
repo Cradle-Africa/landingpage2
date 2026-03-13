@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Partners } from "@/components/sections/Partners";
 import { Solutions } from "@/components/sections/Solutions";
 import { SolutionsTabs } from "@/components/sections/SolutionsTabs";
+import { UseCases } from "@/components/sections/UseCases";
 import { Results } from "@/components/sections/Results";
 import { Trust } from "@/components/sections/Trust";
 import { Footer } from "@/components/sections/Footer";
@@ -16,6 +17,7 @@ export default function Home() {
         <Partners />
         <Solutions />
         <SolutionsTabs />
+        <UseCases />
         <Results />
         <Trust />
       </main>
