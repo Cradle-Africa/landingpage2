@@ -34,7 +34,9 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   appleWebApp: {
-    title: "bigcradle",
+    title: "BigCradle",
+    capable: true,
+    statusBarStyle: "default",
   },
   manifest: "/site.webmanifest",
 };
@@ -46,6 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="BigCradle" />
+      </head>
       <body className={`${dmSans.variable} ${poppins.variable} font-sans antialiased`}>
         {children}
       </body>

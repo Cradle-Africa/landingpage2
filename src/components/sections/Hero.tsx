@@ -113,7 +113,9 @@ export function Hero() {
               Create account
             </a>
             <a
-              href="https://app.bigcradle.com"
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1W4hBLoJ6naXavKGHQItXsnT5FB-BVF2c9yCO7sKje9hEAnUH1IwKdnf3KPq9cx-K2y42uKIkp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-[222px] h-[48px] flex items-center justify-center rounded-[6px] bg-[#F7F7F7] text-[#868686] font-medium font-poppins transition-transform hover:scale-105"
             >
               Book a demo
