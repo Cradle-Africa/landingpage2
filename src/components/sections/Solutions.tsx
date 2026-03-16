@@ -9,216 +9,6 @@ interface SolutionBlockProps {
   order: number;
 }
 
-const SolutionBlock = ({ title, description, imageSrc, order }: SolutionBlockProps) => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        padding: '0px',
-        gap: '144px',
-        width: '1426px',
-        maxWidth: '100%',
-        height: '538px',
-        flex: 'none',
-        order: order,
-        alignSelf: 'stretch',
-        flexGrow: 0,
-      }}
-    >
-      {/* Text Container - Frame 1618868681 */}
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-start',
-          padding: '0px',
-          gap: '24px',
-          width: '439px',
-          height: '305px',
-          flex: 'none',
-          order: 0,
-          flexGrow: 0,
-        }}
-      >
-        {/* Solutions Badge - Frame 1618868680 */}
-        <div
-          style={{
-            boxSizing: 'border-box',
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '8px 12px',
-            gap: '10px',
-            width: '90px',
-            height: '36px',
-            background: '#F0F2FF',
-            border: '1px dashed #0023E8',
-            borderRadius: '36px',
-            flex: 'none',
-            order: 0,
-            flexGrow: 0,
-          }}
-        >
-          <span
-            style={{
-              width: '66px',
-              height: '21px',
-              fontFamily: 'Poppins',
-              fontWeight: 500,
-              fontSize: '14px',
-              lineHeight: '21px',
-              letterSpacing: '0.01em',
-              color: '#0023E8',
-            }}
-          >
-            Solutions
-          </span>
-        </div>
-
-        {/* Content Container - Frame 135 */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            padding: '0px',
-            gap: '16px',
-            width: '439px',
-            height: 'auto',
-            flex: 'none',
-            order: 1,
-            alignSelf: 'stretch',
-            flexGrow: 0,
-          }}
-        >
-          {/* Header & Desc - Frame 133 */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              padding: '0px',
-              gap: '8px',
-              width: '439px',
-              flex: 'none',
-              order: 0,
-              alignSelf: 'stretch',
-              flexGrow: 0,
-            }}
-          >
-            <h2
-              style={{
-                width: '439px',
-                height: '44px',
-                fontFamily: 'Poppins',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                fontSize: '29px',
-                lineHeight: '44px',
-                letterSpacing: '0.01em',
-                color: '#0C0C0C',
-                margin: 0,
-              }}
-            >
-              {title}
-            </h2>
-            <p
-              style={{
-                width: '439px',
-                height: 'auto',
-                minHeight: '90px',
-                fontFamily: 'Poppins',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                fontSize: '20px',
-                lineHeight: '30px',
-                letterSpacing: '0.01em',
-                color: '#676767',
-                margin: 0,
-              }}
-            >
-              {description}
-            </p>
-          </div>
-
-          {/* Request API Link - Frame 134 */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              padding: '0px',
-              gap: '8px',
-              width: '205px',
-              height: '27px',
-              flex: 'none',
-              order: 1,
-              flexGrow: 0,
-              cursor: 'pointer'
-            }}
-          >
-            <span
-              style={{
-                width: '177px',
-                height: '27px',
-                fontFamily: 'Poppins',
-                fontWeight: 400,
-                fontSize: '18px',
-                lineHeight: '27px',
-                letterSpacing: '0.01em',
-                color: '#0027FF',
-              }}
-            >
-              Request API Access
-            </span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.33334 10H16.6667" stroke="#0027FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M11.6667 5L16.6667 10L11.6667 15" stroke="#0027FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      {/* Image Container - Frame 1618868682 */}
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-end',
-          alignItems: 'flex-start',
-          padding: '24px 24px 0px',
-          gap: '10px',
-          width: '843px',
-          height: '538px',
-          background: '#F0F2FF',
-          borderRadius: '16px',
-          flex: 'none',
-          order: 1,
-          flexGrow: 0,
-          overflow: 'hidden'
-        }}
-      >
-        <div
-          style={{
-            width: '788px',
-            height: '514px',
-            backgroundImage: `url(${imageSrc})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'left top',
-            borderRadius: '16px 0px 0px 0px',
-            flex: 'none',
-            order: 0,
-            flexGrow: 1,
-          }}
-        />
-      </div>
-    </div>
-  );
-};
-
 export const Solutions = () => {
   const data = [
     {
@@ -249,41 +39,52 @@ export const Solutions = () => {
   ];
 
   return (
-    <section
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        padding: '100px 72px',
-        gap: '52px',
-        width: '100%',
-        background: '#FFFFFF',
-        position: 'relative',
-        zIndex: 5,
-      }}
-    >
+    <section id="api" className="flex flex-col items-center py-20 px-6 md:px-12 lg:px-20 gap-16 w-full bg-white relative z-[5] font-poppins">
       {/* Decorative dot from Figma */}
-      <div 
-        style={{
-          position: 'absolute',
-          width: '6px',
-          height: '6px',
-          left: '1350px',
-          top: '32px', // Relative to section top
-          background: '#8A9CFF',
-          filter: 'blur(4px)',
-          borderRadius: '50%'
-        }}
-      />
+      <div className="hidden lg:block absolute w-[6px] h-[6px] right-[40px] top-[32px] bg-[#8A9CFF] blur-[4px] rounded-full" />
 
       {data.map((item, idx) => (
-        <SolutionBlock 
-          key={idx} 
-          title={item.title} 
-          description={item.description} 
-          imageSrc={item.imageSrc} 
-          order={idx}
-        />
+        <div
+          key={idx}
+          className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-36 w-full max-w-[1426px] py-12`}
+        >
+          {/* Text Container */}
+          <div className="flex flex-col items-start gap-6 w-full lg:max-w-[439px]">
+            {/* Solutions Badge */}
+            <div className="flex items-center justify-center px-3 py-2 bg-[#F0F2FF] border border-dashed border-[#0023E8] rounded-full">
+              <span className="text-sm font-medium text-[#0023E8]">Solutions</span>
+            </div>
+
+            {/* Content Container */}
+            <div className="flex flex-col items-start gap-4">
+              <div className="flex flex-col gap-2">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal text-[#0C0C0C] leading-tight">
+                  {item.title}
+                </h2>
+                <p className="text-lg md:text-xl text-[#676767] leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+
+              {/* Request API Link */}
+              <div className="flex items-center gap-2 text-[#0027FF] cursor-pointer group">
+                <span className="text-lg group-hover:underline">Request API Access</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
+                  <path d="M3.33334 10H16.6667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M11.6667 5L16.6667 10L11.6667 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Image Container */}
+          <div className="w-full flex-1 min-h-[300px] md:min-h-[400px] lg:min-h-[538px] bg-[#F0F2FF] rounded-2xl p-6 md:p-8 lg:p-12 pb-0 flex items-end overflow-hidden">
+            <div
+              className="w-full h-full min-h-[250px] md:min-h-[350px] bg-contain bg-left-top bg-no-repeat rounded-tl-2xl shadow-2xl transition-transform hover:scale-[1.02]"
+              style={{ backgroundImage: `url(${item.imageSrc})` }}
+            />
+          </div>
+        </div>
       ))}
     </section>
   );

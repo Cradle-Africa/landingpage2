@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/shared/Logo";
 import { navLinks } from "@/features/navLinks";
@@ -15,74 +16,74 @@ export function Navbar() {
 
   return (
     <header
-      className="absolute left-[24px] top-[24px] z-50 flex h-[40px] w-[1392px] items-center max-xl:w-[calc(100%-48px)]"
-      style={{ gap: '286px' }}
+      className="fixed left-1/2 top-[16px] md:top-[24px] z-50 flex h-[60px] w-[calc(100%-32px)] md:w-[calc(100%-48px)] max-w-[1392px] -translate-x-1/2 items-center justify-between rounded-full border border-white/20 bg-white/10 px-4 md:px-6 backdrop-blur-md"
     >
-      {/* Logo - 160x37 */}
-      <div className="flex h-[37px] w-[160px] flex-none items-center">
+      {/* Logo Container */}
+      <div className="flex h-[30px] md:h-[37px] w-[130px] md:w-[160px] flex-none items-center">
         <Logo />
       </div>
 
       {/* Desktop navigation links */}
-      <nav 
-        className="hidden h-[24px] w-[500px] flex-row items-center lg:flex" 
-        style={{ gap: '42px' }}
-      >
-        <a href="#" className="flex h-[24px] w-[49px] items-center whitespace-nowrap font-poppins text-[16px] font-normal leading-[24px] tracking-[0.01em] text-[#494949] transition-colors hover:text-black">
-          Home
-        </a>
-        <a href="#features" className="flex h-[24px] w-[71px] items-center whitespace-nowrap font-poppins text-[16px] font-normal leading-[24px] tracking-[0.01em] text-[#494949] transition-colors hover:text-black">
-          Features
-        </a>
-        <a href="#use-cases" className="flex h-[24px] w-[85px] items-center whitespace-nowrap font-poppins text-[16px] font-normal leading-[24px] tracking-[0.01em] text-[#494949] transition-colors hover:text-black">
-          Use Cases
-        </a>
-        <a href="#about" className="flex h-[24px] w-[72px] items-center whitespace-nowrap font-poppins text-[16px] font-normal leading-[24px] tracking-[0.01em] text-[#494949] transition-colors hover:text-black">
-          About us
-        </a>
-        <a href="#pricing" className="flex h-[24px] w-[55px] items-center whitespace-nowrap font-poppins text-[16px] font-normal leading-[24px] tracking-[0.01em] text-[#494949] transition-colors hover:text-black">
-          Pricing
-        </a>
+      <nav className="hidden flex-row items-center gap-8 lg:flex">
+        {navLinks.map((link) => (
+          <a
+            key={link.label}
+            href={link.href}
+            className="font-poppins text-[16px] font-normal tracking-[0.01em] text-[#494949] transition-colors hover:text-black"
+          >
+            {link.label}
+          </a>
+        ))}
       </nav>
 
-      {/* Action buttons (Sign up/Create account) */}
-      <div className="ml-auto flex flex-row items-center lg:ml-0 lg:flex">
+      {/* Action buttons & Toggle */}
+      <div className="flex flex-row items-center gap-2 md:gap-4">
         <a
           href="https://app.bigcradle.com"
-          className="flex h-[40px] w-[160px] flex-row items-center justify-center gap-[12px] rounded-[6px] border border-[#0067C7] bg-[#0D8AFF] p-0 transition-all hover:bg-[#0B7AE6] hover:shadow-lg"
+          className="flex h-[36px] md:h-[40px] w-[120px] md:w-[160px] items-center justify-center rounded-[6px] border border-[#0067C7] bg-[#0D8AFF] transition-all hover:bg-[#0B7AE6] hover:shadow-lg"
         >
-          <span className="w-[113px] text-center font-poppins text-[14px] font-medium leading-[21px] tracking-[0.01em] text-white">
+          <span className="text-center font-poppins text-[12px] md:text-[14px] font-medium text-white whitespace-nowrap px-2">
             Create account
           </span>
         </a>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="ml-4 inline-flex items-center justify-center p-2 lg:hidden"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/20 p-2 text-[#494949] lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {/* Mobile Menu overlay */}
-      {mobileOpen && (
-        <div className="absolute left-0 top-[60px] w-full rounded-lg border border-border bg-white p-6 shadow-xl lg:hidden">
-          <nav className="flex flex-col gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="font-poppins text-[18px] font-normal text-[#494949]"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-        </div>
-      )}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: -20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: -20 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute left-0 top-[70px] w-full lg:hidden"
+          >
+            <div className="mx-auto w-[calc(100%-8px)] rounded-2xl border border-white/20 bg-white/95 p-6 shadow-2xl backdrop-blur-xl">
+              <nav className="flex flex-col gap-4">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="rounded-lg px-4 py-3 font-poppins text-[16px] font-medium text-[#494949] transition-colors hover:bg-gray-100/50 hover:text-black"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

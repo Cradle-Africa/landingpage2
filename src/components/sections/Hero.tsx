@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { DashedArrow } from '../shared/DashedArrow';
+import { Navbar } from './Navbar';
 
 const DecorativeCluster = ({ side }: { side: 'left' | 'right' }) => (
   <div
@@ -85,166 +86,7 @@ export function Hero() {
       />
 
       {/* Main navigation header */}
-      <div
-        style={{
-          position: 'absolute',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '0px',
-          gap: '292px',
-          width: '1297px',
-          height: '40px',
-          left: '72px',
-          top: '52px',
-          zIndex: 50,
-        }}
-      >
-        {/* Logo */}
-        <div style={{ width: '161px', height: '37px', position: 'relative', flex: 'none', order: 0, flexGrow: 0 }}>
-          <img 
-            src="/logo.png" 
-            alt="BigCradle Logo" 
-            style={{ 
-              position: 'absolute',
-              left: '0%',
-              right: '0%',
-              top: '0%',
-              bottom: '0%',
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'contain' 
-            }}
-          />
-        </div>
-
-        {/* Nav links - Frame 115 */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            padding: '0px',
-            gap: '69px',
-            width: '464px',
-            height: '24px',
-            flex: 'none',
-            order: 1,
-            flexGrow: 0,
-          }}
-        >
-          {[
-            { name: 'Home', width: '49px' },
-            { name: 'Services', width: '68px' },
-            { name: 'Teams', width: '55px' },
-            { name: 'Use Cases', width: '85px' }
-          ].map((item, idx) => (
-            <a
-              key={item.name}
-              href="#"
-              style={{
-                width: item.width,
-                height: '24px',
-                fontFamily: 'Poppins',
-                fontWeight: 400,
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: '0.01em',
-                color: '#494949',
-                textDecoration: 'none',
-                flex: 'none',
-                order: idx,
-                flexGrow: 0,
-                whiteSpace: 'nowrap'
-              }}
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
-
-        {/* Auth Buttons - Frame 1618868677 */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            padding: '0px',
-            gap: '16px',
-            width: '219px',
-            height: '40px',
-            flex: 'none',
-            order: 2,
-            flexGrow: 0,
-          }}
-        >
-          {/* Log in */}
-          <a
-            href="https://app.bigcradle.com"
-            style={{
-              width: '42px',
-              height: '21px',
-              fontFamily: 'Poppins',
-              fontWeight: 500,
-              fontSize: '14px',
-              lineHeight: '21px',
-              letterSpacing: '0.01em',
-              color: '#000000',
-              textDecoration: 'none',
-              flex: 'none',
-              order: 0,
-              flexGrow: 0,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            Log in
-          </a>
-
-          <a
-            href="https://app.bigcradle.com"
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-              padding: '0px',
-              gap: '12px',
-              width: '161px',
-              height: '40px',
-              background: '#0D8AFF',
-              border: '1px solid #0067C7',
-              borderRadius: '6px',
-              flex: 'none',
-              order: 1,
-              flexGrow: 0,
-              cursor: 'pointer',
-              textDecoration: 'none'
-            }}
-          >
-            <span
-              style={{
-                width: '113px',
-                height: '21px',
-                fontFamily: 'Poppins',
-                fontWeight: 500,
-                fontSize: '14px',
-                lineHeight: '21px',
-                letterSpacing: '0.01em',
-                color: '#FFFFFF',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                whiteSpace: 'nowrap'
-              }}
-            >
-              Create account
-            </span>
-          </a>
-        </div>
-      </div>
+      <Navbar />
 
       {/* Background patterns and abstract shapes */}
       <DecorativeCluster side="left" />
@@ -252,148 +94,31 @@ export function Hero() {
 
       {/* Hero center text and CTA region */}
       <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '0px',
-          gap: '20px',
-          position: 'absolute',
-          width: '1069px',
-          height: '434px',
-          left: '186px',
-          top: '318px',
-          zIndex: 10,
-        }}
+        className="relative z-10 flex flex-col items-center px-4 pt-[180px] md:pt-[240px] text-center"
       >
-        {/* Heading, Buttons, and Description section - Frame 2095586481 */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            padding: '0px',
-            gap: '16px',
-            width: '1069px',
-            height: '366px',
-            flex: 'none',
-            order: 0,
-            alignSelf: 'stretch',
-            flexGrow: 0,
-          }}
-        >
-          {/* Frame 121 - Heading */}
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '0px', gap: '4px', width: '1069px', height: '126px', flex: 'none', order: 0, alignSelf: 'stretch', flexGrow: 0 }}>
-            <h1
-              style={{
-                width: '1069px',
-                height: '126px',
-                fontFamily: 'Poppins',
-                fontStyle: 'normal',
-                fontWeight: 700,
-                fontSize: '40px',
-                lineHeight: '156.77%',
-                textAlign: 'center',
-                letterSpacing: '0.01em',
-                color: '#0023E8',
-                margin: 0,
-                flex: 'none',
-                order: 0,
-                alignSelf: 'stretch',
-                flexGrow: 0,
-              }}
-            >
-              Get High-Integrity Data for High-Performance AI and Team
-            </h1>
-          </div>
-
-          {/* Call to Action group - Frame 125 */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              padding: '0px',
-              gap: '16px',
-              width: '460px',
-              height: '48px',
-              flex: 'none',
-              order: 2,
-              flexGrow: 0,
-            }}
-          >
-            {/* Primary CTA */}
-            <a
-              href="https://app.bigcradle.com"
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                padding: '0px',
-                gap: '12px',
-                width: '222px',
-                height: '48px',
-                background: 'linear-gradient(90deg, #0546D2 0%, #94B2FF 50.42%, #0546D2 100%)',
-                borderRadius: '6px',
-                textDecoration: 'none',
-                flex: 'none',
-                order: 0,
-                flexGrow: 0,
-              }}
-            >
-              <span style={{ width: '135px', height: '24px', fontFamily: 'Poppins', fontWeight: 500, fontSize: '16px', lineHeight: '24px', letterSpacing: '0.01em', color: '#FFFFFF', textAlign: 'center' }}>
-                Create account
-              </span>
-            </a>
-
-            {/* Secondary CTA */}
-            <a
-              href="https://app.bigcradle.com"
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                padding: '0px',
-                gap: '12px',
-                width: '222px',
-                height: '48px',
-                background: '#F7F7F7',
-                borderRadius: '6px',
-                textDecoration: 'none',
-                flex: 'none',
-                order: 1,
-                flexGrow: 0,
-              }}
-            >
-              <span style={{ width: '135px', height: '24px', fontFamily: 'Poppins', fontWeight: 500, fontSize: '16px', lineHeight: '24px', letterSpacing: '0.01em', color: '#868686', textAlign: 'center' }}>
-                Book a demo
-              </span>
-            </a>
-          </div>
-
-          {/* Description Text */}
-          <p
-            style={{
-              width: '719px',
-              height: '108px',
-              fontFamily: 'Poppins',
-              fontStyle: 'normal',
-              fontWeight: 400,
-              fontSize: '18px',
-              lineHeight: '27px',
-              textAlign: 'center',
-              letterSpacing: '0.01em',
-              color: '#676767',
-              margin: 0,
-              flex: 'none',
-              order: 1,
-              flexGrow: 0,
-            }}
-          >
+        <div className="max-w-[1069px] w-full flex flex-col items-center gap-6">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#0023E8] leading-tight font-poppins">
+            Get High-Integrity Data for High-Performance AI and Team
+          </h1>
+          
+          <p className="max-w-[719px] text-lg md:text-xl text-[#676767] font-poppins mt-4">
             BigCradle provides human-verified high integrity crowd sourced data & annotation, consumer insights, and research intelligence across Africa—your business make informed decisions and your models ship on time, retain relevant context, and work in production.
           </p>
+
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
+            <a
+              href="https://app.bigcradle.com"
+              className="w-full sm:w-[222px] h-[48px] flex items-center justify-center rounded-[6px] bg-gradient-to-r from-[#0546D2] via-[#94B2FF] to-[#0546D2] text-white font-medium font-poppins transition-transform hover:scale-105"
+            >
+              Create account
+            </a>
+            <a
+              href="https://app.bigcradle.com"
+              className="w-full sm:w-[222px] h-[48px] flex items-center justify-center rounded-[6px] bg-[#F7F7F7] text-[#868686] font-medium font-poppins transition-transform hover:scale-105"
+            >
+              Book a demo
+            </a>
+          </div>
         </div>
       </div>
 
@@ -458,47 +183,28 @@ export function Hero() {
       </div>
 
       {/* Scrolling image row for brand/feature highlights */}
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '0px',
-          gap: '12px',
-          position: 'absolute',
-          width: '1196.26px',
-          height: '173.3px',
-          left: 'calc(50% - 1196.26px/2 + 0.13px)',
-          top: '720px',
-        }}
-      >
-        {[
-          { src: '/image(0).png', border: '#0D8AFF' },
-          { src: '/image (1).png', border: '#0BAD2E' },
-          { src: '/image (2).png', border: '#FF760D' },
-          { src: '/image (3).png', border: '#D30000' },
-          { src: '/image (4).png', border: '#FF0DFF' },
-          { src: '/image (5).png', border: '#9747FF' }
-        ].map((img, idx) => (
-          <div
-            key={idx}
-            style={{
-              boxSizing: 'border-box',
-              width: '170px',
-              height: '151.11px',
-              backgroundImage: `url("${img.src}")`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              border: `1px dashed ${img.border}`,
-              borderRadius: '12px',
-              transform: 'rotate(8deg)',
-              flex: 'none',
-              order: idx,
-              flexGrow: 0,
-            }}
-          />
-        ))}
+      <div className="mt-20 overflow-hidden py-10">
+        <div className="flex flex-row justify-center items-center gap-6 md:gap-12">
+          {[
+            { src: '/image(0).png', border: '#0D8AFF' },
+            { src: '/image (1).png', border: '#0BAD2E' },
+            { src: '/image (2).png', border: '#FF760D' },
+            { src: '/image (3).png', border: '#D30000' },
+            { src: '/image (4).png', border: '#FF0DFF' },
+            { src: '/image (5).png', border: '#9747FF' }
+          ].map((img, idx) => (
+            <div
+              key={idx}
+              className="w-[120px] h-[100px] md:w-[170px] md:h-[150px] shrink-0 rounded-xl border border-dashed rotate-6 md:rotate-12 transition-transform hover:rotate-0 hover:scale-110"
+              style={{
+                backgroundImage: `url("${img.src}")`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                borderColor: img.border,
+              }}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
