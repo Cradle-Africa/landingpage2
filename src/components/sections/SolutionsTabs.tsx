@@ -19,12 +19,12 @@ const contentData: Record<TabType, SolutionContent> = {
   'Data Pipeline': {
     title: "Data Driven Pipeline",
     description: "Streamlined data flows that connect consumer feedback directly to your business intelligence tools. Our pipeline ensures high-quality data integrity and real-time accessibility.",
-    image: "/Pipeline.png"
+    image: "/API.png"
   },
   'API': {
     title: "API Integration & Automation",
     description: "Seamlessly integrate our consumer insight engine into your existing workflows. Our robust APIs allow for automated task deployment and real-time insight streaming at scale.",
-    image: "/API.png"
+    image: "/Pipeline.png"
   }
 };
 

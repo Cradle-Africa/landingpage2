@@ -52,7 +52,7 @@ export function Footer() {
                   <path d="M2 4L8 8L14 4M2 12V4H14V12H2Z" stroke="#141B34" strokeWidth="1.5" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="text-base text-white">big@cradle.africa</span>
+              <span className="text-base text-white">management@bigcradle.com</span>
             </div>
 
             <div className="flex items-center gap-3">
