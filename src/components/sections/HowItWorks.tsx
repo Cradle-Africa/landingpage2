@@ -2,288 +2,52 @@ import React from 'react';
 
 export function HowItWorks() {
   return (
-    <section 
-      id="how-it-works-detailed"
-      style={{
-        position: 'relative',
-        width: '100%',
-        maxWidth: '1440px',
-        minHeight: '1024px',
-        background: '#FFFFFF',
-        margin: '0 auto',
-        overflow: 'hidden',
-      }}
-    >
+    <section id="how-it-works-detailed" className="w-full max-w-[1440px] mx-auto bg-white py-16 px-4 md:px-12 font-poppins overflow-hidden">
       {/* Section header: Title and tagline */}
-      <div 
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '0px',
-          gap: '6px',
-          position: 'absolute',
-          width: '353px',
-          height: '83px',
-          left: 'calc(50% - 353px/2 - 0.5px)',
-          top: '36px',
-        }}
-      >
-        <h2 
-          style={{
-            width: '353px',
-            height: '54px',
-            fontFamily: "'Poppins', sans-serif",
-            fontStyle: 'normal',
-            fontWeight: 600,
-            fontSize: '36px',
-            lineHeight: '54px',
-            textAlign: 'center',
-            letterSpacing: '-0.03em',
-            color: '#000000',
-            margin: 0,
-          }}
-        >
+      <div className="flex flex-col items-center gap-2 mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold text-black leading-tight">
           How it works
         </h2>
-        <p 
-          style={{
-            width: '353px',
-            height: '24px',
-            fontFamily: "'Poppins', sans-serif",
-            fontStyle: 'normal',
-            fontWeight: 400,
-            fontSize: '16px',
-            lineHeight: '24px',
-            textAlign: 'center',
-            letterSpacing: '0.01em',
-            color: '#676767',
-            margin: 0,
-          }}
-        >
+        <p className="text-base md:text-lg text-[#676767]">
           Take a deep dive into how Big Cradle works
         </p>
       </div>
 
       {/* Grid container for step-by-step cards */}
-      <div 
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '0px',
-          gap: '24px',
-          position: 'absolute',
-          width: '1392px',
-          height: '818px',
-          left: '24px',
-          top: '169px',
-        }}
-      >
+      <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 w-full max-w-[1392px] mx-auto">
         {/* "For Businesses" workflow card */}
-        <div 
-          style={{
-            position: 'relative',
-            width: '684px',
-            height: '818px',
-            flex: 'none',
-            order: 0,
-            flexGrow: 0,
-            overflow: 'hidden',
-            borderRadius: '24px', // Match the border radius
-          }}
-        >
-          {/* Background & Border */}
-          <div 
-            style={{
-              boxSizing: 'border-box',
-              position: 'absolute',
-              width: '684px',
-              height: '818px',
-              left: 0,
-              top: 0,
-              background: '#F0F8FF',
-              border: '1px solid #0D8AFF',
-              borderRadius: '24px',
-            }}
-          />
+        <div className="relative w-full lg:w-1/2 min-h-[500px] lg:min-h-[818px] bg-[#F0F8FF] border border-[#0D8AFF] rounded-[24px] overflow-hidden flex flex-col pt-8 px-8">
           {/* Content Header */}
-          <div 
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              padding: '0px',
-              gap: '8px',
-              position: 'absolute',
-              width: '620px',
-              height: '86px',
-              left: '32px',
-              top: '32px',
-            }}
-          >
-            <h3 
-              style={{
-                width: '620px',
-                height: '30px',
-                fontFamily: "'Poppins', sans-serif",
-                fontStyle: 'normal',
-                fontWeight: 500,
-                fontSize: '20px',
-                lineHeight: '30px',
-                letterSpacing: '-0.03em',
-                color: '#000000',
-                margin: 0,
-              }}
-            >
+          <div className="flex flex-col gap-2 mb-8 relative z-10">
+            <h3 className="text-xl font-medium text-black">
               For Businesses (Web Platform)
             </h3>
-            <p 
-              style={{
-                width: '620px',
-                height: '48px',
-                fontFamily: "'Poppins', sans-serif",
-                fontStyle: 'normal',
-                fontWeight: 400,
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: '-0.03em',
-                color: '#676767',
-                margin: 0,
-              }}
-            >
+            <p className="text-base text-[#676767] leading-relaxed">
               Create surveys with powerful tools, distribute them to real participants, and analyze responses with built-in insights.
             </p>
           </div>
           {/* Visual: Survey Builder */}
-          <div 
-            style={{
-              position: 'absolute',
-              width: '941px',
-              height: '675px',
-              left: '32px',
-              top: '141.64px',
-              background: 'url("/Survey builder(1).png") center/cover no-repeat',
-              borderRadius: '20px',
-            }}
-          />
+          <div className="mt-auto -mr-32 -ml-8 h-[300px] md:h-[450px] lg:h-[550px] bg-[url('/Survey builder(1).png')] bg-cover bg-no-repeat rounded-tl-20 relative" />
         </div>
 
         {/* "For Researchers" workflow card */}
-        <div 
-          style={{
-            position: 'relative',
-            width: '684px',
-            height: '818px',
-            flex: 'none',
-            order: 1,
-            flexGrow: 0,
-            overflow: 'hidden',
-            borderRadius: '24px', // Match the border radius
-          }}
-        >
-          {/* Background & Border */}
-          <div 
-            style={{
-              boxSizing: 'border-box',
-              position: 'absolute',
-              width: '684px',
-              height: '818px',
-              left: 0,
-              top: 0,
-              background: '#FFF7F0',
-              border: '1px solid #FF7E0D',
-              borderRadius: '24px',
-            }}
-          />
+        <div className="relative w-full lg:w-1/2 min-h-[500px] lg:min-h-[818px] bg-[#FFF7F0] border border-[#FF7E0D] rounded-[24px] overflow-hidden flex flex-col pt-8 px-8">
           {/* Content Header */}
-          <div 
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              padding: '0px',
-              gap: '8px',
-              position: 'absolute',
-              width: '620px',
-              height: '86px',
-              left: '32px',
-              top: '32px',
-            }}
-          >
-            <h3 
-              style={{
-                width: '620px',
-                height: '30px',
-                fontFamily: "'Poppins', sans-serif",
-                fontStyle: 'normal',
-                fontWeight: 500,
-                fontSize: '20px',
-                lineHeight: '30px',
-                letterSpacing: '-0.03em',
-                color: '#000000',
-                margin: 0,
-              }}
-            >
+          <div className="flex flex-col gap-2 mb-8 relative z-10">
+            <h3 className="text-xl font-medium text-black">
               For Researchers (Mobile App)
             </h3>
-            <p 
-              style={{
-                width: '620px',
-                height: '48px',
-                fontFamily: "'Poppins', sans-serif",
-                fontStyle: 'normal',
-                fontWeight: 400,
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: '-0.03em',
-                color: '#676767',
-                margin: 0,
-              }}
-            >
+            <p className="text-base text-[#676767] leading-relaxed">
               Complete simple tasks and earn rewards instantly and track your progress anytime, anywhere.
             </p>
           </div>
 
-          {/* Group 1000001757 - Mobile App Mockups */}
-          <div 
-            style={{
-              position: 'absolute',
-              width: '500px',
-              height: '891.46px',
-              left: 'calc(50% - 500px/2)',
-              top: '142px',
-            }}
-          >
+          {/* Mobile App Mockups */}
+          <div className="relative mt-auto h-[400px] md:h-[550px] lg:h-[650px] flex items-end justify-center">
             {/* Tasks (4) 2 - Left Phone */}
-            <div 
-              style={{
-                position: 'absolute',
-                width: '395.15px',
-                height: '855.64px',
-                left: 'calc(50% - 395.15px/2 - 52.42px)',
-                top: 0,
-                background: 'url("/Task (4).png") center/cover no-repeat',
-                border: '6px solid #000000',
-                borderRadius: '36px',
-                zIndex: 1,
-              }}
-            />
+            <div className="w-[180px] h-[390px] md:w-[260px] md:h-[563px] lg:w-[320px] lg:h-[690px] bg-[url('/Task (4).png')] bg-cover border-[6px] border-black rounded-[24px] lg:rounded-[36px] relative z-10 -mr-16 md:-mr-24" />
             {/* Home (2) 1 - Right Phone */}
-            <div 
-              style={{
-                position: 'absolute',
-                width: '368.81px',
-                height: '798.74px',
-                left: '223.19px',
-                top: '92.73px', // Offset relative to the first phone
-                background: 'url("/Home (2).png") center/cover no-repeat',
-                border: '6px solid #000000',
-                borderRadius: '36px',
-                zIndex: 2,
-              }}
-            />
+            <div className="w-[170px] h-[360px] md:w-[240px] md:h-[520px] lg:w-[290px] lg:h-[630px] bg-[url('/Home (2).png')] bg-cover border-[6px] border-black rounded-[24px] lg:rounded-[36px] relative z-20 shadow-xl" />
           </div>
         </div>
       </div>

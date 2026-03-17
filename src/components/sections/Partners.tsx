@@ -13,22 +13,7 @@ export const Partners = () => {
   ];
 
   return (
-    <section
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '93px 0', // Reduced horizontal padding to allow full width for marquee
-        gap: '72px',
-        width: '100%',
-        minHeight: '737px',
-        background: '#FCFCFC',
-        position: 'relative',
-        zIndex: 5,
-        overflow: 'hidden',
-      }}
-    >
+    <section className="flex flex-col justify-center items-center py-24 px-4 md:px-12 gap-16 w-full min-h-[737px] bg-[#FCFCFC] relative z-[5] overflow-hidden font-poppins">
       <style>
         {`
           @keyframes marquee {
@@ -46,74 +31,31 @@ export const Partners = () => {
         `}
       </style>
 
-      {/* Partners Section - Frame 2095586484 */}
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '0px',
-          gap: '28px',
-          width: '100%',
-          flex: 'none',
-          order: 0,
-          flexGrow: 0,
-        }}
-      >
-        <h5
-          style={{
-            width: '1110px',
-            maxWidth: '90%',
-            height: '30px',
-            fontFamily: 'Poppins',
-            fontStyle: 'normal',
-            fontWeight: 500,
-            fontSize: '20px',
-            lineHeight: '30px',
-            textAlign: 'center',
-            letterSpacing: '0.01em',
-            color: '#494949',
-            margin: 0,
-            flex: 'none',
-            order: 0,
-            flexGrow: 0,
-          }}
-        >
+      {/* Partners Section */}
+      <div className="flex flex-col items-center gap-8 w-full">
+        <h5 className="max-w-[1110px] w-full text-center text-lg md:text-xl font-medium text-[#494949] leading-normal">
           Trusted by industry-leading companies around the world
         </h5>
 
         {/* Logo Row - Animated Marquee */}
-        <div
-          style={{
-            width: '100%',
-            overflow: 'hidden',
-            padding: '20px 0',
-            maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-          }}
-        >
+        <div className="w-full overflow-hidden py-6 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="marquee-container">
             {/* Double the logos for seamless loop */}
             {[...logos, ...logos].map((logo, idx) => (
               <div
                 key={idx}
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  padding: '0 40px', // Spacing between logos
-                  flexShrink: 0,
-                }}
+                className="flex justify-center items-center px-8 md:px-12 flex-shrink-0"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
                   style={{
-                    width: logo.width,
-                    height: logo.height,
+                    width: 'auto',
+                    height: logo.height === '135px' ? '80px' : '40px', // Scale down slightly for mobile if needed, but here we just make them fit
+                    maxWidth: logo.width,
                     objectFit: 'contain',
-                    margin: '0 auto',
                   }}
+                  className="md:h-auto"
                 />
               </div>
             ))}
@@ -121,65 +63,13 @@ export const Partners = () => {
         </div>
       </div>
 
-      {/* About Section - Frame 131 */}
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '0px',
-          gap: '20px',
-          width: '934px',
-          maxWidth: '100%',
-          height: '286px',
-          flex: 'none',
-          order: 1,
-          flexGrow: 0,
-        }}
-      >
-        <h2
-          style={{
-            width: '347px',
-            maxWidth: '100%',
-            height: '56px',
-            fontFamily: 'Poppins',
-            fontStyle: 'normal',
-            fontWeight: 400,
-            fontSize: '36px',
-            lineHeight: '156.77%',
-            textAlign: 'center',
-            letterSpacing: '0.01em',
-            color: '#000000',
-            margin: 0,
-            flex: 'none',
-            order: 0,
-            flexGrow: 0,
-          }}
-        >
-          What is <span style={{ color: '#0023E8' }}>BigCradle?</span>
+      {/* About Section */}
+      <div className="flex flex-col items-center gap-6 max-w-[934px] w-full text-center">
+        <h2 className="text-3xl md:text-4xl font-normal text-black leading-tight">
+          What is <span className="text-[#0023E8]">BigCradle?</span>
         </h2>
 
-        <p
-          style={{
-            width: '934px',
-            maxWidth: '100%',
-            height: 'auto', // Changed from 210px to auto for responsiveness
-            minHeight: '210px',
-            fontFamily: 'Poppins',
-            fontStyle: 'normal',
-            fontWeight: 400,
-            fontSize: '20px',
-            lineHeight: '30px',
-            textAlign: 'center',
-            letterSpacing: '0.01em',
-            color: '#676767',
-            margin: 0,
-            flex: 'none',
-            order: 1,
-            alignSelf: 'stretch',
-            flexGrow: 0,
-          }}
-        >
+        <p className="text-lg md:text-xl text-[#676767] leading-relaxed">
           At BigCradle, we turn raw data into intelligence through a continuous data flywheel. 
           Using our Task/Survey platform, we crowdsource real-world data at scale, then transform it 
           through data labeling and high-integrity metadata generation to power AI model training, 

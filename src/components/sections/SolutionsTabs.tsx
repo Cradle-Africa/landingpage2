@@ -32,253 +32,58 @@ export const SolutionsTabs = () => {
   const [activeTab, setActiveTab] = useState<TabType>('Survey');
 
   return (
-    <section
-      style={{
-        width: '100%',
-        maxWidth: '1440px',
-        minHeight: '1354px',
-        background: '#FFFFFF',
-        position: 'relative',
-        margin: '0 auto',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        padding: '103px 0px',
-        overflow: 'hidden'
-      }}
-    >
-      {/* Decorative dot */}
-      <div 
-        style={{
-          position: 'absolute',
-          width: '6px',
-          height: '6px',
-          left: '1350px',
-          top: '832px',
-          background: '#8A9CFF',
-          filter: 'blur(4px)',
-          borderRadius: '50%'
-        }}
-      />
+    <section id="solution" className="w-full max-w-[1440px] mx-auto bg-white py-16 px-4 md:px-12 flex flex-col items-center overflow-hidden font-poppins">
+      {/* Decorative dot - hidden on small screens or positioned relatively */}
+      <div className="hidden lg:block absolute w-[6px] h-[6px] right-[40px] top-[400px] bg-[#8A9CFF] blur-[4px] rounded-full" />
 
       {/* Main Section Header */}
-      <h2
-        style={{
-          fontFamily: 'Poppins',
-          fontStyle: 'normal',
-          fontWeight: 500,
-          fontSize: '32px',
-          lineHeight: '156.77%',
-          textAlign: 'center',
-          letterSpacing: '0.01em',
-          color: '#0C0C0C',
-          margin: '0 0 29px 0',
-          width: 'auto',
-          minWidth: '344px'
-        }}
-      >
+      <h2 className="text-3xl md:text-4xl font-medium text-[#0C0C0C] text-center mb-8">
         BigCradle’s Solutions
       </h2>
 
-      {/* Tabs Container - Frame 1618868693 */}
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '0px',
-          gap: '42px',
-          width: 'auto',
-          minWidth: '360px',
-          height: '33px',
-          marginBottom: '49px'
-        }}
-      >
+      {/* Tabs Container */}
+      <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 mb-12">
         {(['Survey', 'Data Pipeline', 'API'] as TabType[]).map((tab) => {
           const isActive = activeTab === tab;
           return (
             <div
               key={tab}
               onClick={() => setActiveTab(tab)}
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                padding: '0px',
-                cursor: 'pointer',
-                flex: 'none',
-                order: tab === 'Survey' ? 0 : tab === 'Data Pipeline' ? 1 : 2,
-                flexGrow: 0,
-              }}
+              className="flex flex-col items-center cursor-pointer group"
             >
-              <span
-                style={{
-                  fontFamily: 'Poppins',
-                  fontWeight: 400,
-                  fontSize: '20px',
-                  lineHeight: '156.77%',
-                  textAlign: 'center',
-                  letterSpacing: '0.01em',
-                  color: isActive ? '#0023E8' : '#979797',
-                  transition: 'color 0.3s ease'
-                }}
-              >
+              <span className={`text-lg md:text-xl font-normal transition-colors duration-300 ${isActive ? 'text-[#0023E8]' : 'text-[#979797] group-hover:text-[#4a62ff]'}`}>
                 {tab}
               </span>
-              <div
-                style={{
-                  width: '60px',
-                  height: '2px',
-                  background: '#0023E8',
-                  borderRadius: '2px',
-                  opacity: isActive ? 1 : 0,
-                  transition: 'opacity 0.3s ease',
-                  marginTop: '0px'
-                }}
-              />
+              <div className={`w-[40px] h-[2px] bg-[#0023E8] rounded-full mt-1 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`} />
             </div>
           );
         })}
       </div>
 
-      {/* Content Frame - Frame 168 */}
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '0px',
-          gap: '32px',
-          width: '1407px',
-          height: 'auto',
-          minHeight: '987px',
-        }}
-      >
-        {/* Dynamic Text Container - Frame 135 */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '0px',
-            gap: '16px',
-            width: '979px',
-            height: '157px',
-            flex: 'none',
-            order: 0,
-            flexGrow: 0,
-          }}
-        >
-          {/* Header & Desc - Frame 133 */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              padding: '0px',
-              gap: '8px',
-              width: '979px',
-              flex: 'none',
-              order: 0,
-              alignSelf: 'stretch',
-              flexGrow: 0,
-            }}
-          >
-            <h3
-              style={{
-                width: '100%',
-                fontFamily: 'Poppins',
-                fontWeight: 500,
-                fontSize: '26px',
-                lineHeight: '39px',
-                textAlign: 'center',
-                letterSpacing: '0.01em',
-                color: '#0C0C0C',
-                margin: 0
-              }}
-            >
+      {/* Content Frame */}
+      <div className="w-full flex flex-col items-center gap-12">
+        {/* Dynamic Text Container */}
+        <div className="max-w-[979px] w-full flex flex-col items-center gap-6 text-center">
+          <div className="flex flex-col gap-2">
+            <h3 className="text-2xl md:text-3xl font-medium text-[#0C0C0C]">
               {contentData[activeTab].title}
             </h3>
-            <p
-              style={{
-                width: '100%',
-                fontFamily: 'Poppins',
-                fontWeight: 400,
-                fontSize: '18px',
-                lineHeight: '27px',
-                textAlign: 'center',
-                letterSpacing: '0.01em',
-                color: '#676767',
-                margin: 0
-              }}
-            >
+            <p className="text-base md:text-lg text-[#676767] max-w-[800px]">
               {contentData[activeTab].description}
             </p>
           </div>
 
-          {/* Button - Medium btns */}
-          <a
-            href="https://app.bigcradle.com"
-            style={{
-              textDecoration: 'none'
-            }}
-          >
-            <button
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                padding: '0px',
-                gap: '12px',
-                width: '180px',
-                height: '40px',
-                background: 'linear-gradient(90deg, #0546D2 0%, #94B2FF 50.42%, #0546D2 100%)',
-                borderRadius: '6px',
-                border: 'none',
-                cursor: 'pointer',
-                flex: 'none',
-                order: 1,
-                flexGrow: 0,
-              }}
-            >
-              <span
-                style={{
-                  width: '139px',
-                  height: '21px',
-                  fontFamily: 'Poppins',
-                  fontWeight: 500,
-                  fontSize: '14px',
-                  lineHeight: '21px',
-                  letterSpacing: '0.01em',
-                  color: '#FFFFFF',
-                }}
-              >
-                Create account
-              </span>
+          <a href="https://app.bigcradle.com" className="inline-block transition-transform hover:scale-105 active:scale-95">
+            <button className="flex items-center justify-center px-8 py-3 bg-gradient-to-r from-[#0546D2] via-[#94B2FF] to-[#0546D2] rounded-[6px] text-white font-medium text-sm md:text-base">
+              Create account
             </button>
           </a>
         </div>
 
         {/* Dynamic Image Container */}
-        <div
-          style={{
-            width: '1407px',
-            height: '798px',
-            backgroundImage: `url(${contentData[activeTab].image})`,
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            flex: 'none',
-            order: 1,
-            flexGrow: 0,
-            transition: 'background-image 0.5s ease'
-          }}
+        <div 
+          className="w-full max-w-[1200px] aspect-[16/9] md:aspect-[1407/798] bg-contain bg-center bg-no-repeat transition-all duration-500 ease-in-out"
+          style={{ backgroundImage: `url(${contentData[activeTab].image})` }}
         />
       </div>
     </section>
