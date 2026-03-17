@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export const Partners = () => {
   const logos = [
@@ -64,7 +65,13 @@ export const Partners = () => {
       </div>
 
       {/* About Section */}
-      <div className="flex flex-col items-center gap-6 max-w-[934px] w-full text-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-col items-center gap-6 max-w-[934px] w-full text-center"
+      >
         <h2 className="text-3xl md:text-4xl font-normal text-black leading-tight">
           What is <span className="text-[#0023E8]">BigCradle?</span>
         </h2>
@@ -78,7 +85,7 @@ export const Partners = () => {
           organizations and NGOs with analytics and impact assessment—turning raw information 
           into decisions that drive real outcomes.
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 };

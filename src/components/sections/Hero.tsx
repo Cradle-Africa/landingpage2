@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import { DashedArrow } from '../shared/DashedArrow';
 import { Navbar } from './Navbar';
 
@@ -96,19 +97,39 @@ export function Hero() {
       <div
         className="relative z-10 flex flex-col items-center px-4 pt-[180px] md:pt-[240px] text-center"
       >
-        <div className="max-w-[1069px] w-full flex flex-col items-center gap-6">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#0023E8] leading-tight font-poppins">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-[1069px] w-full flex flex-col items-center gap-6"
+        >
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#0023E8] leading-tight font-poppins"
+          >
             Get High-Integrity Data for High-Performance AI and Team
-          </h1>
+          </motion.h1>
           
-          <p className="max-w-[719px] text-lg md:text-xl text-[#676767] font-poppins mt-4">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="max-w-[719px] text-lg md:text-xl text-[#676767] font-poppins mt-4"
+          >
             BigCradle provides human-verified high integrity crowd sourced data & annotation, consumer insights, and research intelligence across Africa—your business make informed decisions and your models ship on time, retain relevant context, and work in production.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row items-center gap-4 mt-8"
+          >
             <a
               href="https://app.bigcradle.com"
-              className="w-full sm:w-[222px] h-[48px] flex items-center justify-center rounded-[6px] bg-gradient-to-r from-[#0546D2] via-[#94B2FF] to-[#0546D2] text-white font-medium font-poppins transition-transform hover:scale-105"
+              className="w-full sm:w-[222px] h-[48px] flex items-center justify-center rounded-[6px] bg-gradient-to-r from-[#0546D2] via-[#94B2FF] to-[#0546D2] text-white font-medium font-poppins transition-transform hover:scale-105 hover:shadow-lg hover:shadow-[#0546D2]/20"
             >
               Create account
             </a>
@@ -120,8 +141,8 @@ export function Hero() {
             >
               Book a demo
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Bottom circular decorative element */}
@@ -185,7 +206,13 @@ export function Hero() {
       </div>
 
       {/* Scrolling image row for brand/feature highlights */}
-      <div className="mt-20 overflow-hidden py-10">
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="mt-20 overflow-hidden py-10"
+      >
         <div className="flex flex-row justify-center items-center gap-6 md:gap-12">
           {[
             { src: '/image(0).png', border: '#0D8AFF' },
@@ -195,9 +222,11 @@ export function Hero() {
             { src: '/image (4).png', border: '#FF0DFF' },
             { src: '/image (5).png', border: '#9747FF' }
           ].map((img, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className="w-[120px] h-[100px] md:w-[170px] md:h-[150px] shrink-0 rounded-xl border border-dashed rotate-6 md:rotate-12 transition-transform hover:rotate-0 hover:scale-110"
+              whileHover={{ scale: 1.1, rotate: 0 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="w-[120px] h-[100px] md:w-[170px] md:h-[150px] shrink-0 rounded-xl border border-dashed rotate-6 md:rotate-12 cursor-pointer"
               style={{
                 backgroundImage: `url("${img.src}")`,
                 backgroundSize: 'cover',
@@ -207,7 +236,7 @@ export function Hero() {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

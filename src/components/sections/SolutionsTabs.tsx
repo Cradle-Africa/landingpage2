@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type TabType = 'Survey' | 'Data Pipeline' | 'API';
 
@@ -62,29 +63,45 @@ export const SolutionsTabs = () => {
 
       {/* Content Frame */}
       <div className="w-full flex flex-col items-center gap-12">
-        {/* Dynamic Text Container */}
-        <div className="max-w-[979px] w-full flex flex-col items-center gap-6 text-center">
-          <div className="flex flex-col gap-2">
-            <h3 className="text-2xl md:text-3xl font-medium text-[#0C0C0C]">
-              {contentData[activeTab].title}
-            </h3>
-            <p className="text-base md:text-lg text-[#676767] max-w-[800px]">
-              {contentData[activeTab].description}
-            </p>
-          </div>
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="w-full flex flex-col items-center gap-12"
+          >
+            {/* Dynamic Text Container */}
+            <div className="max-w-[979px] w-full flex flex-col items-center gap-6 text-center">
+              <div className="flex flex-col gap-2">
+                <h3 className="text-2xl md:text-3xl font-medium text-[#0C0C0C]">
+                  {contentData[activeTab].title}
+                </h3>
+                <p className="text-base md:text-lg text-[#676767] max-w-[800px]">
+                  {contentData[activeTab].description}
+                </p>
+              </div>
 
-          <a href="https://app.bigcradle.com" className="inline-block transition-transform hover:scale-105 active:scale-95">
-            <button className="flex items-center justify-center px-8 py-3 bg-gradient-to-r from-[#0546D2] via-[#94B2FF] to-[#0546D2] rounded-[6px] text-white font-medium text-sm md:text-base">
-              Create account
-            </button>
-          </a>
-        </div>
+              <a href="https://app.bigcradle.com" className="inline-block transition-transform hover:scale-105 active:scale-95 hover:shadow-lg hover:shadow-[#0023E8]/20 rounded-[6px]">
+                <button className="flex items-center justify-center px-8 py-3 bg-gradient-to-r from-[#0546D2] via-[#94B2FF] to-[#0546D2] rounded-[6px] text-white font-medium text-sm md:text-base">
+                  Create account
+                </button>
+              </a>
+            </div>
 
-        {/* Dynamic Image Container */}
-        <div 
-          className="w-full max-w-[1200px] aspect-[16/9] md:aspect-[1407/798] bg-contain bg-center bg-no-repeat transition-all duration-500 ease-in-out"
-          style={{ backgroundImage: `url(${contentData[activeTab].image})` }}
-        />
+            {/* Dynamic Image Container */}
+            <div className="w-full max-w-[1200px] mt-4 min-h-[300px] md:min-h-[450px] lg:min-h-[600px] bg-[#F0F2FF] rounded-[32px] p-6 md:p-10 lg:p-14 pb-0 flex items-end overflow-hidden">
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="w-full h-full min-h-[250px] md:min-h-[400px] lg:min-h-[550px] bg-cover bg-top bg-no-repeat rounded-t-2xl lg:rounded-t-[32px] shadow-[0_0_40px_rgba(0,0,0,0.1)] transition-transform duration-500 hover:scale-[1.02]"
+                style={{ backgroundImage: `url(${contentData[activeTab].image})` }}
+              />
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

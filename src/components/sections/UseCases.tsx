@@ -12,70 +12,70 @@ const useCasesData = [
     category: "AI Companies",
     subDesc: "We provide high-quality, labeled datasets and curated data to train AI models efficiently, helping companies build smarter and more reliable AI solutions.",
     buttonText: "Get Your Training Data",
-    image: "/usecase-ai.png"
+    image: "/usecase1.png"
   },
   {
     caseNumber: 2,
-    mainTitle: "Revolutionizing Retail with Real-Time Consumer Data",
-    mainDesc: "Tracking shopper preferences across African urban centers to enable hyper-local inventory management and reduced waste.",
-    category: "Market Research",
-    subDesc: "Gain deep visibility into market trends and emerging consumer habits before your competitors do.",
-    buttonText: "Explore Market Insights",
-    image: "/usecase-market.png"
+    mainTitle: "Trusted by Companies and Organizations Driving Real Impact",
+    mainDesc: "Discover how organizations across industries use BigCradle’s data flywheel to collect insights, drive smarter decisions, and power continuous growth.",
+    category: "Hospitals",
+    subDesc: "Leverage your hospital data to optimize operations, improve patient outcomes, and make informed healthcare decisions.",
+    buttonText: "Create account",
+    image: "/usecase2.png"
   },
   {
     caseNumber: 3,
-    mainTitle: "Empowering Smallholder Farmers with Precision Data",
-    mainDesc: "Connecting rural production with urban demand through real-time logistical insights and soil health monitoring.",
-    category: "Agri-Tech",
-    subDesc: "Our datasets help optimize planting cycles and reduce post-harvest losses across regional supply chains.",
-    buttonText: "Grow Your Impact",
-    image: "/usecase-agri.png"
+    mainTitle: "Trusted by Companies and Organizations Driving Real Impact",
+    mainDesc: "Discover how organizations across industries use BigCradle’s data flywheel to collect insights, drive smarter decisions, and power continuous growth.",
+    category: "Companies",
+    subDesc: "Harness data to streamline operations, understand your market, uncover new opportunities, and power sustainable growth across your business.",
+    buttonText: "Create account",
+    image: "/usecase3.png"
   },
   {
     caseNumber: 4,
-    mainTitle: "Building the Future of Digital Banking in Africa",
-    mainDesc: "Identifying underserved regions and tailoring digital financial products to the unique needs of local economies.",
-    category: "Fintech",
-    subDesc: "Highly granular demographic data enables more accurate credit scoring and risk assessment.",
-    buttonText: "Scale Your Fintech",
-    image: "/usecase-fintech.png"
+    mainTitle: "Trusted by Companies and Organizations Driving Real Impact",
+    mainDesc: "Discover how organizations across industries use BigCradle’s data flywheel to collect insights, drive smarter decisions, and power continuous growth.",
+    category: "Autonomous System",
+    subDesc: "Access high-quality, labelled datasets to train autonomous vehicles and robotics, enabling safer, smarter, and more reliable systems.",
+    buttonText: "Create account",
+    image: "/usecase4.png"
   },
   {
     caseNumber: 5,
-    mainTitle: "Optimizing the Last-Mile Delivery Infrastructure",
-    mainDesc: "Mapping neighborhood complexity and traffic bottlenecks to create efficient distribution networks in growing cities.",
-    category: "Logistics",
-    subDesc: "Hyper-local navigation data reduces fuel consumption and boosts delivery speed.",
-    buttonText: "Optimize Delivery",
-    image: "/usecase-logistics.png"
+    mainTitle: "Trusted by Companies and Organizations Driving Real Impact",
+    mainDesc: "Discover how organizations across industries use BigCradle’s data flywheel to collect insights, drive smarter decisions, and power continuous growth.",
+    category: "NGOs and Organization",
+    subDesc: "Leverage data to evaluate programs, improve outcomes, and create meaningful impact for communities and stakeholders.",
+    buttonText: "Create account",
+    image: "/usecase5.png"
   },
   {
     caseNumber: 6,
-    mainTitle: "Proactive Healthcare Through Community Insights",
-    mainDesc: "Tracking disease trends and resource needs to ensure life-saving supplies reach the right place at the right time.",
-    category: "Public Health",
-    subDesc: "Real-time reporting helps NGOs and health ministries respond faster to community needs.",
-    buttonText: "Strengthen Healthcare",
-    image: "/usecase-health.png"
+    mainTitle: "Trusted by Companies and Organizations Driving Real Impact",
+    mainDesc: "Discover how organizations across industries use BigCradle’s data flywheel to collect insights, drive smarter decisions, and power continuous growth.",
+    category: "Telecoms",
+    subDesc: "Unlock insights from network and customer data to optimize operations, improve service quality, and drive subscriber growth.",
+    buttonText: "Create account",
+    image: "/usecase6.png"
   },
   {
     caseNumber: 7,
-    mainTitle: "Scaling E-Commerce Across Diverse Borders",
-    mainDesc: "Understanding local payment cultures and logistics expectations to build seamless shopping experiences.",
-    category: "E-Commerce",
-    subDesc: "Localized data reduces cart abandonment and improves cross-border customer satisfaction.",
-    buttonText: "Expand Your Store",
-    image: "/usecase-ecommerce.png"
+    mainTitle: "Trusted by Companies and Organizations Driving Real Impact",
+    mainDesc: "Discover how organizations across industries use BigCradle’s data flywheel to collect insights, drive smarter decisions, and power continuous growth.",
+    category: "FMCG",
+    subDesc: "Leverage data to understand consumer behavior, forecast demand, and drive sales growth across fast-moving products.",
+    buttonText: "Create account",
+    image: "/usecase7.png"
   },
   {
     caseNumber: 8,
-    mainTitle: "Capturing the Pulse of Modern African Fashion",
-    mainDesc: "Visual data from local markets helps designers stay ahead of style trends and cultural shifts.",
-    category: "Fast Fashion",
-    subDesc: "Predict demand for specific styles and fabrics to minimize overproduction and maximize sales.",
-    buttonText: "Design the Trend",
-    image: "/usecase-fashion.png"
+    mainTitle: "Trusted by Companies and Organizations Driving Real Impact",
+    mainDesc: "Discover how organizations across industries use BigCradle’s data flywheel to collect insights, drive smarter decisions, and power continuous growth.",
+    category: "Informal Market",
+    subDesc: "Gain insights into consumer trends, spending patterns, and market behavior to make informed business decisions in the informal sector.",
+    buttonText: "Create account",
+    image: "/usecase8.png"
   }
 ];
 
@@ -99,14 +99,26 @@ export const UseCases = () => {
       </div>
 
       {/* Header */}
-      <div className="border-[1.5px] border-dashed border-[#8A9CFF] px-8 py-2 mb-12">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="border-[1.5px] border-dashed border-[#8A9CFF] px-8 py-2 mb-12"
+      >
         <h2 className="text-[#0C0C0C] font-medium text-[32px] leading-[50px] text-center tracking-[0.01em]">
           BigCradle’s Use Cases
         </h2>
-      </div>
+      </motion.div>
 
       {/* Content Layout */}
-      <div className="relative w-full max-w-[1240px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-5 border-t border-b border-dashed border-[#8A9CFF] py-12">
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="relative w-full max-w-[1240px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-5 border-t border-b border-dashed border-[#8A9CFF] py-12"
+      >
         
         {/* Left Column: Main Title & Desc */}
         <div className="flex flex-col items-start gap-12 lg:w-[488px]">
@@ -127,10 +139,10 @@ export const UseCases = () => {
                 transition={{ duration: 0.3 }}
                 className="flex flex-col gap-6"
               >
-                <h3 className="font-inter font-medium text-[36px] lg:text-[40px] leading-[44px] lg:leading-[48px] text-[#181D27]">
+                <h3 className="font-inter font-medium text-[30px] leading-[38px] text-[#181D27]">
                   {current.mainTitle}
                 </h3>
-                <p className="font-inter font-normal text-base lg:text-lg leading-[24px] lg:leading-[27px] text-[#676767]">
+                <p className="font-inter font-normal text-[16px] leading-[24px] text-[#676767]">
                   {current.mainDesc}
                 </p>
               </motion.div>
@@ -141,7 +153,11 @@ export const UseCases = () => {
           <div className="flex items-center gap-3">
             <button 
               onClick={prev}
-              className="w-10 h-10 rounded-full bg-[#B0BCFF] flex items-center justify-center text-white hover:bg-[#8A9CFF] transition-colors"
+              className={`w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors ${
+                currentIdx > 0 
+                  ? 'bg-[#0023E8] hover:bg-[#0019A8]'
+                  : 'bg-[#B0BCFF] hover:bg-[#8A9CFF]'
+              }`}
             >
               <ArrowLeft size={18} />
             </button>
@@ -181,16 +197,16 @@ export const UseCases = () => {
               transition={{ duration: 0.3 }}
               className="flex flex-col gap-6"
             >
-              <h4 className="font-inter font-medium text-[22px] text-[#0023E8]">
+              <h4 className="font-inter font-medium text-[20px] leading-[30px] text-[#0023E8]">
                 {current.category}
               </h4>
-              <p className="font-inter font-normal text-sm leading-[22px] text-[#676767]">
+              <p className="font-inter font-normal text-[16px] leading-[24px] text-[#535862]">
                 {current.subDesc}
               </p>
 
               <a 
                 href="https://app.bigcradle.com"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#0546D2] to-[#3C6FE3] text-white rounded-lg font-medium text-sm transition-transform hover:scale-105"
+                className="flex items-center justify-center w-[192px] h-[40px] bg-[linear-gradient(90deg,#0546D2_0%,#94B2FF_50.42%,#0546D2_100%)] text-white rounded-[6px] font-poppins font-medium text-[14px] leading-[21px] tracking-[0.01em] transition-transform hover:scale-105"
               >
                 {current.buttonText}
               </a>
@@ -198,7 +214,7 @@ export const UseCases = () => {
           </AnimatePresence>
         </div>
 
-      </div>
+      </motion.div>
     </section>
   );
 };

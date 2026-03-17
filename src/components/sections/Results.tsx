@@ -22,8 +22,12 @@ const PricingCard = ({
   return (
     <motion.div
       whileHover={{ y: -5 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5 }}
       className={`flex flex-col items-start p-[30px] gap-10 w-full max-w-[387px] bg-white rounded-[24px] ${
-        isPopular ? 'shadow-[0px_20px_24px_-4px_rgba(10,13,18,0.08),0px_8px_8px_-4px_rgba(10,13,18,0.03)]' : 'border border-gray-100'
+        isPopular ? 'shadow-[0px_20px_24px_-4px_rgba(10,13,18,0.08),0px_8px_8px_-4px_rgba(10,13,18,0.03)] border-2 border-[#0023E8]' : 'border border-gray-100'
       }`}
     >
       <div className="flex flex-col items-start gap-10 self-stretch">
@@ -85,7 +89,13 @@ export const Results = () => {
     <section className="w-full flex flex-col items-center py-10 px-6 md:px-36 gap-14 bg-[#FCFCFC] font-poppins">
       
       {/* Header Area */}
-      <div className="flex flex-col items-center gap-3 w-full max-w-[983px]">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-center gap-3 w-full max-w-[983px]"
+      >
         <div className="flex flex-col justify-center items-center gap-3">
           <div className="flex flex-col items-center gap-3">
             <span className="text-[23px] font-normal leading-8 text-center tracking-[0.01em] text-[#676767]">
@@ -102,10 +112,16 @@ export const Results = () => {
         <p className="text-xl font-normal leading-[30px] text-center tracking-[0.01em] text-[#676767]">
           BigCradle is a scalable insight engine that turns raw data into intelligence—supporting AI, and organizations with analytics and impact-driven decisions.
         </p>
-      </div>
+      </motion.div>
 
       {/* Pricing Container */}
-      <div className="w-full max-w-[1364px] bg-[#F7F7F7] rounded-xl py-10 px-4 flex flex-col lg:flex-row items-center justify-center gap-5">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="w-full max-w-[1364px] bg-[#F7F7F7] rounded-xl py-10 px-4 flex flex-col lg:flex-row items-center justify-center gap-5"
+      >
         <PricingCard 
           title="Basic"
           price="$10/month"
@@ -145,7 +161,7 @@ export const Results = () => {
             "Custom integrations & real-time data"
           ]}
         />
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -3,9 +3,11 @@ import { Hero } from "@/components/sections/Hero";
 import { Partners } from "@/components/sections/Partners";
 import { Solutions } from "@/components/sections/Solutions";
 import { SolutionsTabs } from "@/components/sections/SolutionsTabs";
+import { Services } from "@/components/sections/Services";
 import { UseCases } from "@/components/sections/UseCases";
 import { Results } from "@/components/sections/Results";
 import { Trust } from "@/components/sections/Trust";
+import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -15,12 +17,14 @@ export default function Home() {
       <main className="relative z-10 font-sans overflow-x-hidden">
         <Hero />
         <Partners />
-        <Solutions />
         <SolutionsTabs />
+        <Services />
+        <Solutions />
         <UseCases />
         <Results />
         <Trust />
       </main>
+      <CTA />
       <Footer />
     </div>
   );

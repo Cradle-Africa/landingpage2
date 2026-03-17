@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface SolutionBlockProps {
   title: string;
@@ -44,8 +45,12 @@ export const Solutions = () => {
       <div className="hidden lg:block absolute w-[6px] h-[6px] right-[40px] top-[32px] bg-[#8A9CFF] blur-[4px] rounded-full" />
 
       {data.map((item, idx) => (
-        <div
+        <motion.div
           key={idx}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-36 w-full max-w-[1426px] py-12`}
         >
           {/* Text Container */}
@@ -79,12 +84,14 @@ export const Solutions = () => {
 
           {/* Image Container */}
           <div className="w-full flex-1 min-h-[300px] md:min-h-[400px] lg:min-h-[538px] bg-[#F0F2FF] rounded-2xl p-6 md:p-8 lg:p-12 pb-0 flex items-end overflow-hidden">
-            <div
-              className="w-full h-full min-h-[250px] md:min-h-[350px] bg-contain bg-left-top bg-no-repeat rounded-tl-2xl shadow-2xl transition-transform hover:scale-[1.02]"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="w-full h-full min-h-[250px] md:min-h-[350px] bg-contain bg-left-top bg-no-repeat rounded-tl-2xl shadow-2xl"
               style={{ backgroundImage: `url(${item.imageSrc})` }}
             />
           </div>
-        </div>
+        </motion.div>
       ))}
     </section>
   );
