@@ -226,14 +226,20 @@ export function Hero() {
               key={idx}
               whileHover={{ scale: 1.1, rotate: 0 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="w-[120px] h-[100px] md:w-[170px] md:h-[150px] shrink-0 rounded-xl border border-dashed rotate-6 md:rotate-12 cursor-pointer"
+              className="w-[120px] h-[100px] md:w-[170px] md:h-[150px] shrink-0 rounded-xl border-[1.5px] border-dashed rotate-6 md:rotate-12 cursor-pointer bg-white p-[6px] md:p-[8px]"
               style={{
-                backgroundImage: `url("${img.src}")`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 borderColor: img.border,
               }}
-            />
+            >
+              <div 
+                className="w-full h-full rounded-[8px] md:rounded-[10px]"
+                style={{
+                  backgroundImage: `url("${img.src}")`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              />
+            </motion.div>
           ))}
         </div>
       </motion.div>

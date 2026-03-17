@@ -1,9 +1,18 @@
+"use client";
+
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export function CTA() {
   return (
     <section className="w-full flex justify-center py-6 px-6 bg-[#F2F5F9] font-sans overflow-hidden">
-      <div className="relative w-full max-w-[1392px] h-[493px] bg-[#0D8AFF] rounded-[24px] overflow-hidden">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="relative w-full max-w-[1392px] h-[493px] bg-[#0D8AFF] rounded-[24px] overflow-hidden"
+      >
         
         {/* Background Blur Shapes */}
         <div className="absolute left-[293px] top-[318px] w-[201.32px] h-[231.82px] opacity-40 pointer-events-none hidden lg:block">
@@ -71,7 +80,7 @@ export function CTA() {
           />
         </div>
 
-      </div>
+      </motion.div>
     </section>
   );
 }
