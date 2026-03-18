@@ -58,19 +58,19 @@ export function CTA() {
           {/* Login 1 */}
           <div 
             className="absolute left-[494px] top-[121.08px] w-[319px] h-[563px] border-[6px] border-black rounded-[24px] bg-[#1c1c1e] shadow-2xl"
-            style={{ backgroundImage: "url('/Login.png')", backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}
+            style={{ backgroundImage: "url('/Login.png')", backgroundSize: '100%', backgroundRepeat: 'no-repeat' }}
           />
           
           {/* mobile 2 1 */}
           <div 
             className="absolute left-[805px] top-[104.08px] w-[260px] h-[563px] border-[6px] border-black rounded-[24px] bg-[#1c1c1e] shadow-lg overflow-hidden"
-            style={{ backgroundImage: "url('/mobile 2.png')", backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}
+            style={{ backgroundImage: "url('/mobile 2.png')", backgroundSize: '100%', backgroundRepeat: 'no-repeat' }}
           />
 
           {/* mobile 2 2 */}
           <div 
             className="absolute left-[1079px] top-[121.08px] w-[260px] h-[563px] border-[6px] border-black rounded-[24px] bg-[#1c1c1e] shadow-lg"
-            style={{ backgroundImage: "url('/mobile 2.png')", backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}
+            style={{ backgroundImage: "url('/mobile 2.png')", backgroundSize: '100%', backgroundRepeat: 'no-repeat' }}
           />
 
           {/* mobile 1 (Topmost) */}

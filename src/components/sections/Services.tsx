@@ -120,7 +120,7 @@ export const Services = () => {
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="w-full h-full min-h-[250px] md:min-h-[450px] lg:min-h-[650px] bg-cover bg-top bg-no-repeat rounded-t-2xl lg:rounded-t-[32px] shadow-[0_0_40px_rgba(0,0,0,0.1)] transition-transform duration-500 hover:scale-[1.02]"
+                className="w-full h-full min-h-[250px] md:min-h-[450px] lg:min-h-[650px] bg-absolute bg-top bg-no-repeat rounded-t-2xl lg:rounded-t-[32px] shadow-[0_0_40px_rgba(0,0,0,0.1)] transition-transform duration-500 hover:scale-[1.02]"
                 style={{ backgroundImage: `url(${serviceContentData[activeTab].image})` }}
               />
             </div>
