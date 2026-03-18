@@ -67,19 +67,19 @@ export const Services = () => {
       </h2>
 
       {/* Tabs Container */}
-      <div className="flex flex-wrap justify-center items-start gap-6 md:gap-[44px] mb-16 w-full max-w-[1232px]">
+      <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 mb-12 w-full max-w-[1232px]">
         {TABS.map((tab) => {
           const isActive = activeTab === tab;
           return (
             <div
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className="flex flex-col items-center justify-center cursor-pointer group pb-2"
+              className="flex flex-col items-center cursor-pointer group"
             >
-              <span className={`text-lg md:text-[20px] leading-[156.77%] font-normal transition-colors duration-300 ${isActive ? 'text-[#0023E8]' : 'text-[#979797] group-hover:text-[#4a62ff]'}`}>
+              <span className={`text-lg md:text-xl font-normal transition-colors duration-300 ${isActive ? 'text-[#0023E8]' : 'text-[#979797] group-hover:text-[#4a62ff]'}`}>
                 {tab}
               </span>
-              <div className={`w-full h-[2px] bg-[#0023E8] rounded-full mt-1 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`} />
+              <div className={`w-[40px] h-[2px] bg-[#0023E8] rounded-full mt-1 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`} />
             </div>
           );
         })}
@@ -115,12 +115,12 @@ export const Services = () => {
             </div>
 
             {/* Dynamic Image Container */}
-            <div className="w-full max-w-[1383px] mt-4 min-h-[300px] md:min-h-[500px] lg:min-h-[700px] bg-[#F0F2FF] rounded-[32px] p-6 md:p-10 lg:p-16 pb-0 flex items-end overflow-hidden">
+            <div className="w-full max-w-[1200px] mt-4 min-h-[300px] md:min-h-[450px] lg:min-h-[600px] bg-[#F0F2FF] rounded-[32px] p-6 md:p-10 lg:p-14 pb-0 flex items-end overflow-hidden">
               <motion.div
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="w-full h-full min-h-[250px] md:min-h-[450px] lg:min-h-[650px] bg-absolute bg-top bg-no-repeat rounded-t-2xl lg:rounded-t-[32px] shadow-[0_0_40px_rgba(0,0,0,0.1)] transition-transform duration-500 hover:scale-[1.02]"
+                className="w-full h-full min-h-[250px] md:min-h-[400px] lg:min-h-[550px] bg-cover bg-top bg-no-repeat rounded-t-2xl lg:rounded-t-[32px] shadow-[0_0_40px_rgba(0,0,0,0.1)] transition-transform duration-500 hover:scale-[1.02]"
                 style={{ backgroundImage: `url(${serviceContentData[activeTab].image})` }}
               />
             </div>
