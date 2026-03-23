@@ -13,7 +13,7 @@ export function Logo({ className }: LogoProps) {
         alt="BigCradle"
         width={161}
         height={37}
-        className="h-[37px] w-[161px] object-contain"
+        className="h-full w-auto max-w-full object-contain object-left"
         priority
       />
     </a>

@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export const Trust = () => {
   return (
@@ -20,14 +21,20 @@ export const Trust = () => {
       </style>
 
       {/* Header Container */}
-      <div className="flex flex-col items-center gap-2 mb-16 text-center max-w-[578px] w-full">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-center gap-2 mb-16 text-center max-w-[578px] w-full"
+      >
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#0C0C0C]">
           Data You Can Trust
         </h2>
         <p className="text-base md:text-lg text-[#676767]">
           Every response comes from a verified human contributor
         </p>
-      </div>
+      </motion.div>
 
       {/* Image Row Container - Animated Marquee for full width feel */}
       <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
