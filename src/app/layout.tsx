@@ -15,12 +15,12 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "BigCradle — The Intelligence Engine for Teams",
+  title: "BigCradle — The Intelligence Engine for Africa",
   description:
     "BigCradle connects your team with the infrastructure they need to build, ship, and scale — faster than ever before.",
   keywords: ["BigCradle", "teams", "infrastructure", "intelligence engine", "collaboration"],
   openGraph: {
-    title: "BigCradle — The Intelligence Engine for Teams",
+    title: "BigCradle — The Intelligence Engine for Africa",
     description:
       "Connect your team with the infrastructure they need to build, ship, and scale.",
     type: "website",

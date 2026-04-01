@@ -69,7 +69,7 @@ export function Footer() {
                   <circle cx="8" cy="6" r="1.5" stroke="#141B34" strokeWidth="1.5"/>
                 </svg>
               </div>
-              <span className="text-base text-white">Nyakabanda, KK 114 Kigali, Rwanda</span>
+              <span className="text-base text-white">Norrsken House, 1 KN 78 Street, Town (Mumugi), Kigali, Rwanda</span>
             </div>
           </div>
         </div>
