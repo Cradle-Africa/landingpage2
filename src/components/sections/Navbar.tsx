@@ -29,9 +29,14 @@ export function Navbar() {
           <a
             key={link.label}
             href={link.href}
-            className="group relative font-poppins text-[16px] font-normal tracking-[0.01em] text-[#494949] transition-colors hover:text-black"
+            className="group relative flex items-center gap-1.5 font-poppins text-[16px] font-normal tracking-[0.01em] text-[#494949] transition-colors hover:text-black"
           >
             {link.label}
+            {link.badge && (
+              <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-[#0D8AFF] text-white text-[10px] font-bold leading-none">
+                {link.badge}
+              </span>
+            )}
             <svg 
               className="absolute -bottom-1.5 -left-1 w-[calc(100%+8px)] h-[8px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               viewBox="0 0 102 10" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
@@ -88,10 +93,15 @@ export function Navbar() {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="rounded-lg px-4 py-3 font-poppins text-[16px] font-medium text-[#494949] transition-colors hover:bg-gray-100/50 hover:text-black"
+                    className="flex items-center gap-2 rounded-lg px-4 py-3 font-poppins text-[16px] font-medium text-[#494949] transition-colors hover:bg-gray-100/50 hover:text-black"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
+                    {link.badge && (
+                      <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-[#0D8AFF] text-white text-[10px] font-bold leading-none">
+                        {link.badge}
+                      </span>
+                    )}
                   </a>
                 ))}
                 

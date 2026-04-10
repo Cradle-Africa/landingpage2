@@ -6,4 +6,5 @@ export const navLinks: NavLink[] = [
   { label: "API", href: "#api" },
   { label: "Services", href: "#services" },
   { label: "UseCases", href: "#usecases" },
+  { label: "ADIAW", href: "/adiaw", badge: "New" },
 ];
