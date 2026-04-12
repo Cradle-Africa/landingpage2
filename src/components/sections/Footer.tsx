@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
@@ -27,7 +28,13 @@ export function Footer() {
         {/* Company Column */}
         <div className="flex flex-col gap-4 max-w-[400px]">
           <div className="h-[64px] flex items-center">
-            <img src="/footerlogo.png" alt="BigCradle Logo" className="h-[37px] w-auto object-contain" />
+            <Image 
+              src="/footerlogo.png" 
+              alt="BigCradle Logo" 
+              width={160} 
+              height={37} 
+              className="h-[37px] w-auto object-contain" 
+            />
           </div>
           <p className="text-sm text-[#676767] leading-relaxed">
             African Consumer Insights. Delivered. Executed.

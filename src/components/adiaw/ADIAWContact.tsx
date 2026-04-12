@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Mail, Globe, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
@@ -21,7 +22,10 @@ export function ADIAWContact() {
           {/* Brand column */}
           <div className="flex flex-col gap-5 max-w-[320px]">
             {/* Logo */}
-            <div className="flex items-center gap-3">
+            <Link 
+              href="/" 
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity w-fit"
+            >
               <div className="flex items-center justify-center w-10 h-10 rounded-[10px] bg-gradient-to-br from-[#0023E8] to-[#0D8AFF]">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                   <path d="M9 1L17 9L9 17M17 9H1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -31,7 +35,7 @@ export function ADIAWContact() {
                 <p className="text-white font-bold text-[16px]">BigCradle</p>
                 <p className="text-[#8FA8C8] text-[12px]">ADIAW 2026</p>
               </div>
-            </div>
+            </Link>
             <p className="text-[14px] text-[#8FA8C8] leading-relaxed">
               Building trusted data infrastructure for Africa&apos;s digital economy through
               skilled talent and purposeful partnerships.

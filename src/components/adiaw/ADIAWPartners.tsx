@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { adiawPartners } from "@/lib/adiaw-data";
 
@@ -54,10 +55,14 @@ export function ADIAWPartners() {
               Hosted By
             </span>
             <div className="flex items-center justify-center gap-4 px-10 py-6 bg-gradient-to-r from-[#EEF2FF] to-[#EBF5FF] rounded-[20px] border border-[#0023E8]/10">
-              <div className="flex items-center justify-center w-[56px] h-[56px] rounded-[16px] bg-gradient-to-br from-[#0023E8] to-[#0D8AFF]">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2L20 7V17L12 22L4 17V7L12 2Z" fill="white" fillOpacity="0.9" />
-                </svg>
+              <div className="flex items-center justify-center w-[56px] h-[56px] rounded-[16px] bg-white border border-[#0023E8]/10 overflow-hidden shadow-sm">
+                <Image
+                  src="/logo.png"
+                  alt="BigCradle"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <div>
                 <p className="text-[22px] font-bold text-[#0C0C0C]">BigCradle</p>
@@ -78,43 +83,72 @@ export function ADIAWPartners() {
           <div className="flex-1 h-px bg-gray-100" />
         </div>
 
-        {/* Partners Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
-          {partners.map((partner, idx) => {
-            const palette = partnerColors[idx % partnerColors.length];
-            return (
-              <motion.div
-                key={partner.id}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                whileHover={{ y: -4 }}
-                className="flex flex-col items-center gap-4 p-6 bg-white rounded-[20px] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 text-center"
-              >
-                {/* Avatar */}
+        {/* Partners Marquee */}
+        <div className="relative w-full overflow-hidden py-2 select-none group/marquee">
+          <motion.div
+            className="flex gap-6 w-max"
+            animate={{
+              x: [0, -280 * partners.length - 24 * partners.length], // (width + gap) * count
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 30, // Smooth slow movement
+                ease: "linear",
+              },
+            }}
+            whileHover={{ transition: { duration: 10000 } }} // Effectively pause on hover
+          >
+            {[...partners, ...partners].map((partner, idx) => {
+              const palette = partnerColors[idx % partnerColors.length];
+              return (
                 <div
-                  className="flex items-center justify-center w-[60px] h-[60px] rounded-full text-[18px] font-bold"
-                  style={{ background: palette.bg, color: palette.color }}
+                  key={`${partner.id}-${idx}`}
+                  className="flex flex-col items-center justify-center gap-4 p-8 min-w-[280px] bg-white rounded-[24px] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 text-center"
                 >
-                  {partner.shortName
-                    ? partner.shortName.slice(0, 2).toUpperCase()
-                    : partner.name.slice(0, 2).toUpperCase()}
-                </div>
-                <div className="flex flex-col gap-1">
-                  <p className="text-[15px] font-semibold text-[#0C0C0C] leading-snug">
-                    {partner.shortName || partner.name}
-                  </p>
-                  <span
-                    className="inline-block px-3 py-1 rounded-full text-[12px] font-medium"
-                    style={{ background: palette.bg, color: palette.color }}
+                  {/* Logo Container */}
+                  <div
+                    className="flex items-center justify-center w-[80px] h-[80px] rounded-[20px] overflow-hidden p-2"
+                    style={{ background: palette.bg }}
                   >
-                    {partner.role}
-                  </span>
+                    {partner.image ? (
+                      <Image
+                        src={partner.image}
+                        alt={partner.name}
+                        width={60}
+                        height={60}
+                        className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                      />
+                    ) : (
+                      <div
+                        className="text-[20px] font-bold"
+                        style={{ color: palette.color }}
+                      >
+                        {partner.name.slice(0, 2).toUpperCase()}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="flex flex-col gap-1">
+                    <p className="text-[16px] font-bold text-[#0C0C0C] leading-snug tracking-tight">
+                      {partner.name}
+                    </p>
+                    <span
+                      className="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase"
+                      style={{ background: palette.bg, color: palette.color }}
+                    >
+                      {partner.role}
+                    </span>
+                  </div>
                 </div>
-              </motion.div>
-            );
-          })}
+              );
+            })}
+          </motion.div>
+
+          {/* Faded edges for smooth entry/exit */}
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
         </div>
       </div>
     </section>

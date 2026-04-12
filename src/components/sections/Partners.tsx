@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export const Partners = () => {
@@ -47,16 +48,17 @@ export const Partners = () => {
                 key={idx}
                 className="flex justify-center items-center px-8 md:px-12 flex-shrink-0"
               >
-                <img
+                <Image
                   src={logo.src}
                   alt={logo.alt}
+                  width={200}
+                  height={80}
+                  className="md:h-auto object-contain"
                   style={{
                     width: 'auto',
-                    height: logo.height === '135px' ? '80px' : '40px', // Scale down slightly for mobile if needed, but here we just make them fit
+                    height: logo.height === '135px' ? '80px' : '40px',
                     maxWidth: logo.width,
-                    objectFit: 'contain',
                   }}
-                  className="md:h-auto"
                 />
               </div>
             ))}

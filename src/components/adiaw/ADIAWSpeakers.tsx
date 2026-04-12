@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { adiawSpeakers } from "@/lib/adiaw-data";
 
@@ -45,12 +46,24 @@ export function ADIAWSpeakers() {
             >
               {/* Avatar */}
               <div className="relative">
-                <div
-                  className="w-[80px] h-[80px] rounded-full flex items-center justify-center text-[26px] font-bold transition-transform duration-300 group-hover:scale-110"
-                  style={{ background: speaker.bg, color: speaker.color }}
-                >
-                  {speaker.initials}
-                </div>
+                {speaker.image ? (
+                  <div className="w-[80px] h-[80px] rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-110">
+                    <Image
+                      src={speaker.image}
+                      alt={speaker.name}
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                ) : (
+                  <div
+                    className="w-[80px] h-[80px] rounded-full flex items-center justify-center text-[26px] font-bold transition-transform duration-300 group-hover:scale-110"
+                    style={{ background: speaker.bg, color: speaker.color }}
+                  >
+                    {speaker.initials}
+                  </div>
+                )}
                 {/* Accent ring */}
                 <div
                   className="absolute inset-[-4px] rounded-full border-2 border-dashed opacity-0 group-hover:opacity-100 transition-opacity duration-300"
