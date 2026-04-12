@@ -162,7 +162,7 @@ export const adiawSpeakers = [
   },
   {
     id: "virgilio-montero",
-    name: "Virgilio Montero",
+    name: "Virgílio Monteiro",
     role: "CEO, Andorinha",
     initials: "VM",
     image: "/adiaw/speakers/virgilio.jpeg",
