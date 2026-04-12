@@ -26,7 +26,7 @@ export function ADIAWNavbar() {
           </svg>
         </div>
         <span className="font-bold text-[14px] text-[#0C0C0C] hidden sm:block">
-          ADIAW <span className="text-[#0023E8]">2025</span>
+          ADIAW <span className="text-[#0023E8]">2026</span>
         </span>
       </a>
 
