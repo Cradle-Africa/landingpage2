@@ -172,7 +172,7 @@ export function ADIAWExecutive() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full h-[52px] rounded-[10px] bg-gradient-to-r from-[#0546D2] via-[#0D8AFF] to-[#0546D2] text-white font-semibold text-[15px] hover:shadow-xl hover:shadow-[#0D8AFF]/30 hover:scale-[1.02] transition-all duration-200"
               >
-                Register for Workshop
+                Register for Executive Workshop
                 <ExternalLink className="w-4 h-4" />
               </a>
 

@@ -94,7 +94,7 @@ export function ADIAWContact() {
             <div className="flex flex-col gap-3">
               {[
                 { label: "Apply for Fellowship", href: "https://app.bigcradle.com/talents" },
-                { label: "Register for Workshop", href: "https://app.bigcradle.com/workshop" },
+                { label: "Register for Executive Workshop", href: "https://app.bigcradle.com/workshop" },
                 { label: "BigCradle Platform", href: "https://app.bigcradle.com" },
                 { label: "Back to Main Site", href: "/" },
               ].map((link) => (

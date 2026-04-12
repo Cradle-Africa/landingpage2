@@ -26,7 +26,7 @@ export function ADIAWStickyBar() {
         >
           <div className="hidden sm:flex flex-col">
             <span className="text-[13px] font-semibold text-[#0C0C0C]">
-              Africa Data Integrity &amp; Annotation Fellowship
+              Africa Data Integrity &amp; Annotation Workshop
             </span>
             <span className="text-[12px] text-[#676767]">
               April 23 · Digital Transformation Center, Kigali
@@ -35,20 +35,20 @@ export function ADIAWStickyBar() {
 
           <div className="flex items-center gap-3 w-full sm:w-auto">
             <a
+              href="https://app.bigcradle.com/workshop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-none flex h-[42px] px-5 items-center justify-center rounded-[6px] bg-gradient-to-r from-[#0546D2] via-[#0D8AFF] to-[#0546D2] text-white text-[13px] font-medium hover:shadow-lg hover:shadow-[#0D8AFF]/30 transition-all whitespace-nowrap"
+            >
+              Register for Executive Workshop
+            </a>
+            <a
               href="https://app.bigcradle.com/talents"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none flex h-[42px] px-5 items-center justify-center rounded-[6px] border border-[#0023E8] text-[#0023E8] text-[13px] font-medium hover:bg-[#EEF2FF] transition-colors whitespace-nowrap"
             >
               Apply for Fellowship
-            </a>
-            <a
-              href="https://app.bigcradle.com/workshop"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-none flex h-[42px] px-5 items-center justify-center rounded-[6px] bg-gradient-to-r from-[#0546D2] via-[#0D8AFF] to-[#0546D2] text-white text-[13px] font-medium hover:shadow-lg hover:shadow-[#0D8AFF]/30 transition-all whitespace-nowrap"
-            >
-              Register for Workshop
             </a>
           </div>
         </motion.div>

@@ -40,13 +40,13 @@ export function ADIAWCTA() {
           {/* Badge */}
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/15 text-[#94B2FF] text-[13px] font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-[#0D8AFF] animate-pulse" />
-            Applications Now Open
+            Registration Now Open
           </span>
 
           <h2 className="text-3xl md:text-4xl lg:text-[48px] font-bold text-white leading-tight">
-            Become part of Africa&apos;s{" "}
+            Shape the future of Africa&apos;s{" "}
             <span className="bg-gradient-to-r from-[#0D8AFF] to-[#94B2FF] bg-clip-text text-transparent">
-              growing AI workforce.
+              data infrastructure.
             </span>
           </h2>
 
@@ -57,22 +57,22 @@ export function ADIAWCTA() {
 
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <a
-              id="adiaw-apply-fellowship-cta"
-              href="https://app.bigcradle.com/talents"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto flex items-center justify-center gap-2 h-[54px] px-8 rounded-[10px] bg-gradient-to-r from-[#0546D2] via-[#0D8AFF] to-[#0546D2] text-white font-semibold text-[15px] hover:shadow-2xl hover:shadow-[#0D8AFF]/30 hover:scale-[1.02] transition-all duration-200"
-            >
-              Apply for Fellowship
-            </a>
-            <a
               id="adiaw-register-workshop-cta"
               href="https://app.bigcradle.com/workshop"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 h-[54px] px-8 rounded-[10px] bg-gradient-to-r from-[#0546D2] via-[#0D8AFF] to-[#0546D2] text-white font-semibold text-[15px] hover:shadow-2xl hover:shadow-[#0D8AFF]/30 hover:scale-[1.02] transition-all duration-200"
+            >
+              Register for Executive Workshop
+            </a>
+            <a
+              id="adiaw-apply-fellowship-cta"
+              href="https://app.bigcradle.com/talents"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto flex items-center justify-center gap-2 h-[54px] px-8 rounded-[10px] bg-white/10 border border-white/20 text-white font-semibold text-[15px] hover:bg-white/15 hover:scale-[1.02] transition-all duration-200"
             >
-              Register for Workshop
+              Apply for Fellowship
             </a>
           </div>
         </div>

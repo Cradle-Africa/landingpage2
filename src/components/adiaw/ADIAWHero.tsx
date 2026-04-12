@@ -303,7 +303,7 @@ export function ADIAWHero() {
           className="flex items-center gap-2 px-5 py-2 rounded-full border border-[#0023E8]/20 bg-[#EEF2FF] text-[#0023E8] text-[13px] font-semibold"
         >
           <span className="w-2 h-2 rounded-full bg-[#0023E8] animate-pulse" />
-          Fellowship &amp; Workshop · Kigali, Rwanda · April 2026
+          Executive Workshop &amp; Talent Fellowship · Kigali, Rwanda · April 2026
         </motion.div>
 
         {/* Main title */}
@@ -317,7 +317,7 @@ export function ADIAWHero() {
           <span className="bg-gradient-to-r from-[#0023E8] via-[#0D8AFF] to-[#9747FF] bg-clip-text text-transparent">
             &amp; Annotation
           </span>{" "}
-          Fellowship
+          Workshop
         </motion.h1>
 
         {/* Subtitle */}
@@ -337,9 +337,9 @@ export function ADIAWHero() {
           transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
           className="text-[17px] md:text-lg text-[#676767] leading-relaxed max-w-[680px]"
         >
-          Artificial Intelligence systems rely heavily on high-quality labeled and
-          structured data. This fellowship equips African talent with practical
-          skills to work in the global AI data ecosystem.
+          Join senior leaders to navigate the intersection of AI, data governance,
+          and organizational strategy. Together, we are building a trusted data
+          infrastructure for Africa&apos;s AI ecosystem.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -350,8 +350,8 @@ export function ADIAWHero() {
           className="flex flex-col sm:flex-row items-center gap-4 mt-4 w-full sm:w-auto"
         >
           <a
-            id="adiaw-apply-fellowship-hero"
-            href="https://app.bigcradle.com/talents"
+            id="adiaw-register-workshop-hero"
+            href="https://app.bigcradle.com/workshop"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto flex items-center justify-center gap-2 h-[52px] px-8 rounded-[8px] bg-gradient-to-r from-[#0546D2] via-[#0D8AFF] to-[#0546D2] text-white font-semibold text-[15px] hover:shadow-xl hover:shadow-[#0D8AFF]/25 hover:scale-[1.02] transition-all duration-200"
@@ -359,16 +359,16 @@ export function ADIAWHero() {
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path d="M9 1L17 9L9 17M17 9H1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            Apply for Fellowship
+            Register for Executive Workshop
           </a>
           <a
-            id="adiaw-register-workshop-hero"
-            href="https://app.bigcradle.com/workshop"
+            id="adiaw-apply-fellowship-hero"
+            href="https://app.bigcradle.com/talents"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto flex items-center justify-center gap-2 h-[52px] px-8 rounded-[8px] border-2 border-[#0023E8] text-[#0023E8] font-semibold text-[15px] hover:bg-[#EEF2FF] hover:scale-[1.02] transition-all duration-200"
           >
-            Register for Executive Workshop
+            Apply for Talent Fellowship
           </a>
         </motion.div>
 
@@ -380,9 +380,9 @@ export function ADIAWHero() {
           className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-8 pt-8 border-t border-gray-100 w-full"
         >
           {[
-            { value: "100", label: "Data Fellows" },
-            { value: "6 Wks", label: "Program Duration" },
             { value: "Apr 23", label: "Executive Workshop" },
+            { value: "100", label: "Data Fellows" },
+            { value: "6 Wks", label: "Fellowship Duration" },
             { value: "Free", label: "Fellowship Cost" },
           ].map((item, idx) => (
             <motion.div

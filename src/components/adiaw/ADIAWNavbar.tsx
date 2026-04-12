@@ -6,11 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const adiawNavLinks = [
   { label: "Overview", href: "#adiaw-hero" },
-  { label: "What You'll Learn", href: "#adiaw-features" },
-  { label: "Partners", href: "#adiaw-partners" },
   { label: "Workshop", href: "#adiaw-executive" },
   { label: "Speakers", href: "#adiaw-speakers" },
+  { label: "Partners", href: "#adiaw-partners" },
   { label: "Fellowship", href: "#adiaw-fellowship" },
+  { label: "Curriculum", href: "#adiaw-features" },
 ];
 
 export function ADIAWNavbar() {
@@ -46,20 +46,20 @@ export function ADIAWNavbar() {
       {/* CTAs */}
       <div className="flex items-center gap-2 sm:gap-3">
         <a
+          href="https://app.bigcradle.com/workshop"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-[36px] px-4 items-center justify-center rounded-[6px] bg-[#0D8AFF] text-white text-[13px] font-medium hover:bg-[#0B7AE6] transition-colors whitespace-nowrap"
+        >
+          Register for Executive Workshop
+        </a>
+        <a
           href="https://app.bigcradle.com/talents"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:flex h-[36px] px-4 items-center justify-center rounded-[6px] border border-[#0023E8] text-[#0023E8] text-[13px] font-medium hover:bg-[#EEF2FF] transition-colors whitespace-nowrap"
         >
           Apply for Fellowship
-        </a>
-        <a
-          href="https://app.bigcradle.com/workshop"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex h-[36px] px-4 items-center justify-center rounded-[6px] bg-[#0D8AFF] text-white text-[13px] font-medium hover:bg-[#0B7AE6] transition-colors whitespace-nowrap"
-        >
-          Register Workshop
         </a>
         <button
           className="inline-flex h-[32px] w-[32px] shrink-0 items-center justify-center rounded-full bg-gray-100 xl:hidden"
@@ -94,6 +94,15 @@ export function ADIAWNavbar() {
                 ))}
                 <div className="mt-2 flex flex-col gap-2 border-t border-gray-100 pt-4">
                   <a
+                    href="https://app.bigcradle.com/workshop"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-[44px] items-center justify-center rounded-[6px] bg-[#0D8AFF] text-white text-[14px] font-medium"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    Register for Executive Workshop
+                  </a>
+                  <a
                     href="https://app.bigcradle.com/talents"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -101,15 +110,6 @@ export function ADIAWNavbar() {
                     onClick={() => setMobileOpen(false)}
                   >
                     Apply for Fellowship
-                  </a>
-                  <a
-                    href="https://app.bigcradle.com/workshop"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-[44px] items-center justify-center rounded-[6px] bg-[#0D8AFF] text-white text-[14px] font-medium"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    Register for Workshop
                   </a>
                 </div>
               </nav>

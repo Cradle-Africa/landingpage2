@@ -11,22 +11,22 @@ import { ADIAWNavbar } from "@/components/adiaw/ADIAWNavbar";
 import { ADIAWStickyBar } from "@/components/adiaw/ADIAWStickyBar";
 
 export const metadata: Metadata = {
-  title: "Africa Data Integrity & Annotation Fellowship (ADIAW) | BigCradle",
+  title: "Africa Data Integrity & Annotation Workshop (ADIAW) | BigCradle",
   description:
-    "Building Trusted Data Infrastructure for Africa's Digital Economy. Apply for the ADIAW Fellowship or Register for the Executive Leadership Workshop — April 23, Kigali.",
+    "Building Trusted Data Infrastructure for Africa's Digital Economy. Register for the Executive Leadership Workshop or Apply for the ADIAW Talent Fellowship — April 23, Kigali.",
   keywords: [
     "ADIAW",
-    "Africa data fellowship",
+    "Africa data workshop",
     "AI data annotation",
-    "data labeling Africa",
-    "BigCradle fellowship",
-    "Rwanda data training",
-    "Africa AI workforce",
+    "data governance Africa",
+    "BigCradle workshop",
+    "Rwanda data leadership",
+    "Africa AI strategy",
   ],
   openGraph: {
-    title: "Africa Data Integrity & Annotation Fellowship | BigCradle",
+    title: "Africa Data Integrity & Annotation Workshop | BigCradle",
     description:
-      "Equipping African talent with practical skills to work in the global AI data ecosystem.",
+      "Join senior leaders to navigate the intersection of AI, data governance, and organizational strategy.",
     type: "website",
   },
 };
@@ -38,11 +38,11 @@ export default function ADIAWPage() {
       <ADIAWStickyBar />
       <main>
         <ADIAWHero />
-        <ADIAWFeatures />
-        <ADIAWPartners />
         <ADIAWExecutive />
         <ADIAWSpeakers />
+        <ADIAWPartners />
         <ADIAWFellowship />
+        <ADIAWFeatures />
         <ADIAWCTA />
         <ADIAWContact />
       </main>
