@@ -303,7 +303,7 @@ export function ADIAWHero() {
           className="flex items-center gap-2 px-5 py-2 rounded-full border border-[#0023E8]/20 bg-[#EEF2FF] text-[#0023E8] text-[13px] font-semibold"
         >
           <span className="w-2 h-2 rounded-full bg-[#0023E8] animate-pulse" />
-          Fellowship &amp; Workshop · Kigali, Rwanda · April 2025
+          Fellowship &amp; Workshop · Kigali, Rwanda · April 2026
         </motion.div>
 
         {/* Main title */}
@@ -368,7 +368,7 @@ export function ADIAWHero() {
             rel="noopener noreferrer"
             className="w-full sm:w-auto flex items-center justify-center gap-2 h-[52px] px-8 rounded-[8px] border-2 border-[#0023E8] text-[#0023E8] font-semibold text-[15px] hover:bg-[#EEF2FF] hover:scale-[1.02] transition-all duration-200"
           >
-            Register for Workshop
+            Register for Executive Workshop
           </a>
         </motion.div>
 
