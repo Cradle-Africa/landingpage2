@@ -9,6 +9,7 @@ import { ADIAWCTA } from "@/components/adiaw/ADIAWCTA";
 import { ADIAWContact } from "@/components/adiaw/ADIAWContact";
 import { ADIAWNavbar } from "@/components/adiaw/ADIAWNavbar";
 import { ADIAWStickyBar } from "@/components/adiaw/ADIAWStickyBar";
+import { ADIAWVideoSection } from "@/components/adiaw/ADIAWVideoSection";
 
 export const metadata: Metadata = {
   title: "Africa Data Integrity & Annotation Workshop (ADIAW) | BigCradle",
@@ -38,6 +39,7 @@ export default function ADIAWPage() {
       <ADIAWStickyBar />
       <main>
         <ADIAWHero />
+        <ADIAWVideoSection />
         <ADIAWExecutive />
         <ADIAWSpeakers />
         <ADIAWPartners />
