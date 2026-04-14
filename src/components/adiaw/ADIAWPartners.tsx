@@ -31,7 +31,7 @@ export function ADIAWPartners() {
           className="flex flex-col items-center gap-4 text-center"
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EEF2FF] border border-[#0023E8]/15 text-[#0023E8] text-[13px] font-semibold">
-            Hosted By &amp; Partners
+            Hosted By &amp; Backed by
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0C0C0C] leading-tight">
             Backed by Leading Organizations
@@ -78,7 +78,7 @@ export function ADIAWPartners() {
         <div className="flex items-center gap-4 w-full max-w-[600px]">
           <div className="flex-1 h-px bg-gray-100" />
           <span className="text-[13px] font-semibold uppercase tracking-widest text-[#9CA3AF]">
-            Partners
+            Backed by
           </span>
           <div className="flex-1 h-px bg-gray-100" />
         </div>

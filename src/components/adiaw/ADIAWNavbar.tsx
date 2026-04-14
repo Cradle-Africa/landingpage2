@@ -8,7 +8,7 @@ const adiawNavLinks = [
   { label: "Overview", href: "#adiaw-hero" },
   { label: "Workshop", href: "#adiaw-executive" },
   { label: "Speakers", href: "#adiaw-speakers" },
-  { label: "Partners", href: "#adiaw-partners" },
+  { label: "Backed by", href: "#adiaw-partners" },
   { label: "Fellowship", href: "#adiaw-fellowship" },
   { label: "Curriculum", href: "#adiaw-features" },
 ];

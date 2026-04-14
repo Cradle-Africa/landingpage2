@@ -100,6 +100,13 @@ export const adiawPartners = [
     isHost: false,
     image: "/adiaw/partners/andorinhalogo.PNG",
   },
+  {
+    id: "ncsa",
+    name: "National Cyber Security Authority",
+    role: "Partner",
+    isHost: false,
+    image: "/adiaw/partners/ncsalogo.png",
+  },
 ];
 
 export const adiawExecutiveTopics = [
