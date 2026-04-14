@@ -157,7 +157,7 @@ export function ADIAWExecutive() {
                   <div>
                     <p className="text-[13px] text-[#8FA8C8] mb-0.5">Date</p>
                     <p className="text-[22px] font-bold text-white">April 23</p>
-                    <p className="text-[13px] text-[#8FA8C8]">2025</p>
+                    <p className="text-[13px] text-[#8FA8C8]">2026</p>
                   </div>
                 </div>
               </div>
