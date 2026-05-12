@@ -28,7 +28,12 @@ export function CTA() {
           
           <div className="flex flex-row items-start gap-3 flex-wrap">
             {/* Google Play Button */}
-            <button className="flex flex-row items-center gap-2 px-4 py-3 bg-[#242326] hover:bg-black transition-colors rounded-xl h-[52px]">
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.bigcradle.researchergame" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex flex-row items-center gap-2 px-4 py-3 bg-[#242326] hover:bg-black transition-colors rounded-xl h-[52px] cursor-pointer"
+            >
               <svg width="20" height="22" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.61051 24.3149C2.20392 24.086 1.95654 23.6331 1.95654 23.109L1.95654 2.89098C1.95654 2.36688 2.20392 1.91404 2.61051 1.68512C3.01711 1.4562 3.52739 1.488 3.9069 1.76751L21.3634 11.8765C21.7259 12.1448 21.9333 12.5562 21.9333 13C21.9333 13.4437 21.7259 13.8552 21.3634 14.1235L3.9069 24.2325C3.52739 24.512 3.01711 24.5438 2.61051 24.3149Z" fill="white"/>
               </svg>
@@ -36,13 +41,16 @@ export function CTA() {
                 <span className="font-normal text-[10px] leading-[1] tracking-[-0.03em] text-white/80">Get it on</span>
                 <span className="font-medium text-[16px] leading-[1] tracking-[-0.03em] text-white">Google Play</span>
               </div>
-            </button>
+            </a>
 
             {/* Apple Store Button */}
-            <button className="flex flex-row items-center gap-2 px-4 py-3 bg-[#242326] hover:bg-black transition-colors rounded-xl h-[52px]">
+            <button 
+              disabled
+              className="flex flex-row items-center gap-2 px-4 py-3 bg-[#242326] opacity-50 cursor-not-allowed rounded-xl h-[52px]"
+            >
               <svg width="20" height="24" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.3262 5.068C17.3888 3.73117 18.0673 1.95547 17.8821 0.177734C16.3571 0.8173 14.3315 1.78923 13.2104 3.16109C12.2217 4.36435 11.4363 6.22307 11.6661 7.95759C13.364 8.08115 15.2227 7.02636 16.3262 5.068ZM23.4921 21.9669C23.1517 22.9961 22.0366 25.1388 20.3541 27.6433C18.8142 29.8973 17.228 32.1311 14.6548 32.1706C12.1466 32.2096 11.3364 30.6406 8.52741 30.6406C5.71838 30.6406 4.80165 32.1311 2.39958 32.2096C-0.0815469 32.2882 -1.50348 29.8188 0.0577909 27.5252C1.56494 25.3344 3.7501 22.1818 4.20846 21.3653C5.55018 18.986 6.78652 17.8593 8.35645 17.8988C10.7423 17.9383 12.3912 19.5542 14.6548 19.5542C16.8916 19.5542 18.3245 18.2393 21.1332 18.4752C22.0104 18.5937 24.3204 18.9912 25.6837 21.3258C25.5661 21.3653 23.5833 22.2736 23.4921 21.9669Z" fill="#DDDDDD"/>
-                <path d="M12.7533 13.882C14.7618 13.882 17.0691 12.4468 18.3244 10.9572C18.0684 10.518C17.3061 9.40003 16.0392 8.78912 14.6548 8.78912C12.433 8.78912 10.6698 10.3703 10.4262 10.6385C10.6453 11.396 11.3644 13.882 12.7533 13.882Z" fill="#DDDDDD" />
+                <path d="M12.7533 13.882C14.7618 13.882 17.0691 12.4468 18.3244 10.9572C18.0684 10.518 17.3061 9.40003 16.0392 8.78912C14.6548 8.78912C12.433 8.78912 10.6698 10.3703 10.4262 10.6385C10.6453 11.396 11.3644 13.882 12.7533 13.882Z" fill="#DDDDDD" />
               </svg>
               <div className="flex flex-col justify-end items-start gap-[2px]">
                 <span className="font-normal text-[10px] leading-[1] tracking-[-0.03em] text-white/80">Get it on</span>
