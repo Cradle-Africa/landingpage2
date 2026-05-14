@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/shared/Logo";
@@ -9,10 +9,11 @@ import { navLinks } from "@/features/navLinks";
 
 /**
  * Navbar component for the landing page.
- * Handles desktop navigation and mobile menu toggle.
+ * Handles desktop navigation with mega menu support and mobile menu toggle.
  */
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
 
   return (
     <header
@@ -24,29 +25,88 @@ export function Navbar() {
       </div>
 
       {/* Desktop navigation links */}
-      <nav className="hidden flex-row items-center gap-8 lg:flex">
+      <nav className="hidden flex-row items-center gap-6 lg:flex">
         {navLinks.map((link) => (
-          <a
+          <div
             key={link.label}
-            href={link.href}
-            className="group relative flex items-center gap-1.5 font-poppins text-[16px] font-normal tracking-[0.01em] text-[#494949] transition-colors hover:text-black"
+            className="relative"
+            onMouseEnter={() => link.megaMenu && setActiveMegaMenu(link.label)}
+            onMouseLeave={() => setActiveMegaMenu(null)}
           >
-            {link.label}
-            {link.badge && (
-              <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-[#0D8AFF] text-white text-[10px] font-bold leading-none">
-                {link.badge}
-              </span>
-            )}
-            <svg 
-              className="absolute -bottom-1.5 -left-1 w-[calc(100%+8px)] h-[8px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              viewBox="0 0 102 10" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            <a
+              href={link.href}
+              className="group relative flex items-center gap-1.5 font-poppins text-[16px] font-normal tracking-[0.01em] text-[#494949] transition-colors hover:text-black"
             >
-              <path 
-                className="stroke-[#3C6FE3] stroke-[2px] [stroke-linecap:round] [stroke-dasharray:150] [stroke-dashoffset:150] group-hover:[stroke-dashoffset:0] transition-all duration-500 ease-out"
-                d="M1 2.14777C1.15865 2.14777 1.31731 2.14777 6.31731 2.14777C11.3173 2.14777 21.1538 2.14777 26.9351 2.08819C34.1475 2.01386 40.375 1.78668 48.1418 1.66751C52.2862 1.60393 54.0385 0.945322 54.6034 1.0031C57.6588 1.3156 48.9327 3.82326 45.3245 5.4518C43.5561 6.24996 41.5577 7.43783 39.3966 8.51931C38.4799 8.97808 38.0288 9.36247 46.113 8.41459C54.1971 7.46672 70.8558 5.20264 80.1514 4.0363C90.875 2.86996 93.4567 2.7508 96.012 2.57025C97.4567 2.50887 99.2019 2.50887 101 2.50887" 
-              />
-            </svg>
-          </a>
+              {link.label}
+              {link.megaMenu && (
+                <ChevronDown
+                  className={cn(
+                    "h-4 w-4 transition-transform duration-200",
+                    activeMegaMenu === link.label && "rotate-180"
+                  )}
+                />
+              )}
+              {link.badge && (
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-[#0D8AFF] text-white text-[10px] font-bold leading-none">
+                  {link.badge}
+                </span>
+              )}
+              <svg
+                className="absolute -bottom-1.5 -left-1 w-[calc(100%+8px)] h-[8px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                viewBox="0 0 102 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  className="stroke-[#3C6FE3] stroke-[2px] [stroke-linecap:round] [stroke-dasharray:150] [stroke-dashoffset:150] group-hover:[stroke-dashoffset:0] transition-all duration-500 ease-out"
+                  d="M1 2.14777C1.15865 2.14777 1.31731 2.14777 6.31731 2.14777C11.3173 2.14777 21.1538 2.14777 26.9351 2.08819C34.1475 2.01386 40.375 1.78668 48.1418 1.66751C52.2862 1.60393 54.0385 0.945322 54.6034 1.0031C57.6588 1.3156 48.9327 3.82326 45.3245 5.4518C43.5561 6.24996 41.5577 7.43783 39.3966 8.51931C38.4799 8.97808 38.0288 9.36247 46.113 8.41459C54.1971 7.46672 70.8558 5.20264 80.1514 4.0363C90.875 2.86996 93.4567 2.7508 96.012 2.57025C97.4567 2.50887 99.2019 2.50887 101 2.50887"
+                />
+              </svg>
+            </a>
+
+            {/* Mega Menu Dropdown */}
+            <AnimatePresence>
+              {link.megaMenu && activeMegaMenu === link.label && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-[720px] rounded-2xl border border-gray-200 bg-white shadow-2xl overflow-hidden z-50"
+                >
+                  {/* Mega Menu Header */}
+                  <div className="bg-gradient-to-r from-[#0D8AFF] to-[#3C6FE3] px-6 py-4">
+                    <h3 className="text-white font-poppins text-lg font-semibold">
+                      {link.megaMenu.title}
+                    </h3>
+                    <p className="text-white/80 text-sm mt-1 font-poppins">
+                      {link.megaMenu.subtitle}
+                    </p>
+                  </div>
+
+                  {/* Mega Menu Items Grid */}
+                  <div className="grid grid-cols-2 gap-px bg-gray-100">
+                    {link.megaMenu.items.map((item) => (
+                      <a
+                        key={item.title}
+                        href={item.href}
+                        className="bg-white p-5 hover:bg-gray-50 transition-colors group"
+                        onClick={() => setActiveMegaMenu(null)}
+                      >
+                        <h4 className="font-poppins text-base font-semibold text-gray-900 group-hover:text-[#0D8AFF] transition-colors">
+                          {item.title}
+                        </h4>
+                        <p className="text-sm text-gray-600 mt-1.5 font-poppins leading-relaxed">
+                          {item.description}
+                        </p>
+                      </a>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         ))}
       </nav>
 
@@ -73,7 +133,11 @@ export function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X className="h-[18px] w-[18px] sm:h-5 sm:w-5" /> : <Menu className="h-[18px] w-[18px] sm:h-5 sm:w-5" />}
+          {mobileOpen ? (
+            <X className="h-[18px] w-[18px] sm:h-5 sm:w-5" />
+          ) : (
+            <Menu className="h-[18px] w-[18px] sm:h-5 sm:w-5" />
+          )}
         </button>
       </div>
 
@@ -90,21 +154,13 @@ export function Navbar() {
             <div className="mx-auto w-[calc(100%-8px)] rounded-2xl border border-white/20 bg-white/95 p-6 shadow-2xl backdrop-blur-xl">
               <nav className="flex flex-col gap-4">
                 {navLinks.map((link) => (
-                  <a
+                  <MobileNavLink
                     key={link.label}
-                    href={link.href}
-                    className="flex items-center gap-2 rounded-lg px-4 py-3 font-poppins text-[16px] font-medium text-[#494949] transition-colors hover:bg-gray-100/50 hover:text-black"
+                    link={link}
                     onClick={() => setMobileOpen(false)}
-                  >
-                    {link.label}
-                    {link.badge && (
-                      <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-[#0D8AFF] text-white text-[10px] font-bold leading-none">
-                        {link.badge}
-                      </span>
-                    )}
-                  </a>
+                  />
                 ))}
-                
+
                 {/* Mobile Log in fallback */}
                 <div className="mt-2 flex flex-col border-t border-gray-100 pt-4 sm:hidden">
                   <a
@@ -121,5 +177,85 @@ export function Navbar() {
         )}
       </AnimatePresence>
     </header>
+  );
+}
+
+// Mobile nav link component with expandable mega menu
+function MobileNavLink({
+  link,
+  onClick,
+}: {
+  link: { label: string; href: string; badge?: string; megaMenu?: { title: string; subtitle: string; items: { title: string; description: string; href: string }[] } };
+  onClick: () => void;
+}) {
+  const [expanded, setExpanded] = useState(false);
+
+  if (!link.megaMenu) {
+    return (
+      <a
+        href={link.href}
+        className="flex items-center gap-2 rounded-lg px-4 py-3 font-poppins text-[16px] font-medium text-[#494949] transition-colors hover:bg-gray-100/50 hover:text-black"
+        onClick={onClick}
+      >
+        {link.label}
+        {link.badge && (
+          <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-[#0D8AFF] text-white text-[10px] font-bold leading-none">
+            {link.badge}
+          </span>
+        )}
+      </a>
+    );
+  }
+
+  return (
+    <div>
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="flex items-center justify-between w-full rounded-lg px-4 py-3 font-poppins text-[16px] font-medium text-[#494949] transition-colors hover:bg-gray-100/50 hover:text-black"
+      >
+        <span>{link.label}</span>
+        <ChevronDown
+          className={cn(
+            "h-4 w-4 transition-transform duration-200",
+            expanded && "rotate-180"
+          )}
+        />
+      </button>
+      <AnimatePresence>
+        {expanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="px-4 pb-3 space-y-2">
+              <div className="bg-blue-50 rounded-lg p-3 mb-2">
+                <p className="font-poppins text-sm font-semibold text-[#0D8AFF]">
+                  {link.megaMenu.title}
+                </p>
+                <p className="text-xs text-gray-600 mt-1">
+                  {link.megaMenu.subtitle}
+                </p>
+              </div>
+              {link.megaMenu.items.map((item) => (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  className="block rounded-lg px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0D8AFF] transition-colors"
+                  onClick={onClick}
+                >
+                  <span className="font-medium">{item.title}</span>
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    {item.description}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

@@ -1,9 +1,9 @@
 import { BackgroundDecor } from "@/components/shared/BackgroundDecor";
 import { Hero } from "@/components/sections/Hero";
 import { Partners } from "@/components/sections/Partners";
-import { Solutions } from "@/components/sections/Solutions";
 import { SolutionsTabs } from "@/components/sections/SolutionsTabs";
 import { Services } from "@/components/sections/Services";
+import { Solutions } from "@/components/sections/Solutions";
 import { UseCases } from "@/components/sections/UseCases";
 import { Results } from "@/components/sections/Results";
 import { Trust } from "@/components/sections/Trust";

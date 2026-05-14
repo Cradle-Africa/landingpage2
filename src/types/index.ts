@@ -1,7 +1,18 @@
+export interface MegaMenuItem {
+  title: string;
+  description: string;
+  href: string;
+}
+
 export interface NavLink {
   label: string;
   href: string;
   badge?: string;
+  megaMenu?: {
+    title: string;
+    subtitle: string;
+    items: MegaMenuItem[];
+  };
 }
 
 export interface Feature {
