@@ -42,14 +42,14 @@ function HeroSection() {
         >
           <h1 className="font-poppins text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
             Powering Intelligent Systems with{" "}
-            <span className="text-[#0D8AFF]">Human Intelligence</span> and{" "}
-            <span className="text-[#0D8AFF]">Real-World Data</span>
+            <span className="text-[#0D8AFF]">Human Feedback, Structured Datasets,</span> and{" "}
+            <span className="text-[#0D8AFF]">Operational Data Infrastructure</span>
           </h1>
           <p className="font-poppins text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-            BigCradle helps organizations build reliable AI and autonomous systems through scalable data operations, human-in-the-loop workflows, model evaluation, and high-integrity data infrastructure.
+            BigCradle helps organisations improve the integrity and contextual quality of their data through scalable data operations, human-in-the-loop validation, and structured data workflows.
           </p>
           <p className="font-poppins text-base text-gray-500 leading-relaxed mb-10 max-w-2xl mx-auto">
-            From AI training pipelines to autonomous technologies and advanced analytics systems, we transform raw data into structured intelligence that drives better decisions and system performance.
+            We work with existing data systems—ensuring data is accurate, consistent, and contextually reliable for use in AI, analytics, and autonomous technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -122,7 +122,7 @@ function IntroSection() {
               Modern AI and autonomous systems depend on large volumes of reliable, structured, and continuously validated data. But many organisations struggle with fragmented workflows, inconsistent labelling quality, poor validation processes, and limited operational capacity.
             </p>
             <p className="font-poppins text-lg text-gray-600 leading-relaxed">
-              BigCradle provides the <span className="font-semibold text-gray-900">human intelligence layer</span> that supports the development, improvement, and maintenance of intelligent systems. We combine scalable operational workflows with structured quality assurance to help organizations move from raw data collection to production-ready intelligence.
+              BigCradle provides the <span className="font-semibold text-gray-900">high-integrity, high-quality contextual data</span> that supports the development, improvement, and maintenance of intelligent systems. We combine scalable operational workflows with structured quality assurance to help organizations move from raw data collection to production-ready intelligence.
             </p>
           </div>
         </motion.div>
@@ -388,22 +388,22 @@ function ProcessSection() {
   const steps = [
     {
       step: 1,
-      title: "Discovery & System Understanding",
+      title: "Meet your dedicated team",
       description: "We align with your operational goals, system requirements, data complexity, and quality expectations.",
     },
     {
       step: 2,
-      title: "Workflow Architecture",
+      title: "Expert consultation",
       description: "BigCradle designs scalable workflows tailored to your datasets, operational structure, and performance objectives.",
     },
     {
       step: 3,
-      title: "Pilot & Calibration",
+      title: "Annotation and Quality Review",
       description: "We validate workflows through pilot operations, benchmark quality standards, and refine review systems before scaling.",
     },
     {
       step: 4,
-      title: "Scaled Operations",
+      title: "Delivery and Support",
       description: "Dedicated operational teams execute annotation, validation, and evaluation workflows with continuous quality monitoring.",
     },
   ];
@@ -419,7 +419,7 @@ function ProcessSection() {
           className="text-center mb-12"
         >
           <h2 className="font-poppins text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            How BigCradle Works
+            BigCradle Annotation Flow
           </h2>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -546,7 +546,7 @@ function FutureSection() {
             Supporting the Next Generation of Intelligent Technologies
           </h2>
           <p className="font-poppins text-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
-            As AI and autonomous systems continue to evolve, the demand for reliable human intelligence operations will only increase. BigCradle is building the infrastructure and operational workflows needed to support this future — enabling organizations to scale intelligent technologies with confidence.
+            As AI and autonomous systems continue to evolve, the demand for reliable, high-integrity, and highly contextual data will only increase. BigCradle is building the infrastructure and operational workflows needed to support this future — enabling organizations to scale intelligent technologies with confidence.
           </p>
         </motion.div>
       </div>
@@ -569,7 +569,7 @@ function CTASection() {
             Let's Build Reliable Intelligent Systems Together
           </h2>
           <p className="font-poppins text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Whether you're developing AI models, autonomous systems, or large-scale intelligent platforms, BigCradle provides the operational intelligence needed to support scalable, high-quality system performance.
+            Whether you're developing AI models, autonomous systems, or large-scale intelligent platforms, BigCradle provides high-integrity, highly contextual data and operational intelligence to support reliable, scalable system performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
