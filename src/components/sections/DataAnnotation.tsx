@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Brain, Target, Shield, Users, Zap, BarChart, Layers, Eye, MessageSquare, Activity, Cpu, Building2, Heart, Bot, LineChart } from "lucide-react";
 import { Navbar } from "@/components/sections/Navbar";
@@ -34,39 +35,62 @@ function HeroSection() {
   return (
     <section className="relative pt-32 pb-20 px-6 md:pt-40 md:pb-28">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-4xl mx-auto"
-        >
-          <h1 className="font-poppins text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            Powering Intelligent Systems with{" "}
-            <span className="text-[#0D8AFF]">Human Feedback, Structured Datasets,</span> and{" "}
-            <span className="text-[#0D8AFF]">Operational Data Infrastructure</span>
-          </h1>
-          <p className="font-poppins text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-            BigCradle helps organisations improve the integrity and contextual quality of their data through scalable data operations, human-in-the-loop validation, and structured data workflows.
-          </p>
-          <p className="font-poppins text-base text-gray-500 leading-relaxed mb-10 max-w-2xl mx-auto">
-            We work with existing data systems—ensuring data is accurate, consistent, and contextually reliable for use in AI, analytics, and autonomous technologies.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#0D8AFF] text-white font-poppins text-base font-semibold rounded-lg transition-all hover:bg-[#0B7AE6] hover:shadow-lg"
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Text content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="font-poppins text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              Powering Intelligent Systems with{" "}
+              <span className="text-[#0D8AFF]">Human Feedback, Structured Datasets,</span> and{" "}
+              <span className="text-[#0D8AFF]">Operational Data Infrastructure</span>
+            </h1>
+            <p className="font-poppins text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+              BigCradle helps organisations improve the integrity and contextual quality of their data through scalable data operations, human-in-the-loop validation, and structured data workflows.
+            </p>
+            <p className="font-poppins text-base text-gray-500 leading-relaxed mb-10">
+              We work with existing data systems—ensuring data is accurate, consistent, and contextually reliable for use in AI, analytics, and autonomous technologies.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#0D8AFF] text-white font-poppins text-base font-semibold rounded-lg transition-all hover:bg-[#0B7AE6] hover:shadow-lg"
+              >
+                Talk to an Expert
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+              <a
+                href="#services"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#0D8AFF] text-[#0D8AFF] font-poppins text-base font-semibold rounded-lg transition-all hover:bg-[#0D8AFF] hover:text-white"
+              >
+                Scope Your Project
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Right: Hero image — place your image at public/images/data-annotation-hero.jpg */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative hidden lg:block"
+          >
+            <div
+              className="relative w-full rounded-2xl shadow-2xl overflow-hidden"
+              style={{ minHeight: "420px", background: "#e8f0fe" }}
             >
-              Talk to an Expert
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-            <a
-              href="#services"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#0D8AFF] text-[#0D8AFF] font-poppins text-base font-semibold rounded-lg transition-all hover:bg-[#0D8AFF] hover:text-white"
-            >
-              Scope Your Project
-            </a>
-          </div>
-        </motion.div>
+              <Image
+                src="/images/data-annotation-hero.jpg"
+                alt="Data annotation dashboard showing structured datasets and AI training pipelines"
+                fill
+                className="object-cover rounded-2xl"
+                priority
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -107,25 +131,48 @@ function BrandStrip() {
 function IntroSection() {
   return (
     <section className="py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="font-poppins text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Building the Infrastructure Behind Intelligent Systems
-          </h2>
-          <div className="space-y-4">
-            <p className="font-poppins text-lg text-gray-600 leading-relaxed">
-              Modern AI and autonomous systems depend on large volumes of reliable, structured, and continuously validated data. But many organisations struggle with fragmented workflows, inconsistent labelling quality, poor validation processes, and limited operational capacity.
-            </p>
-            <p className="font-poppins text-lg text-gray-600 leading-relaxed">
-              BigCradle provides the <span className="font-semibold text-gray-900">high-integrity, high-quality contextual data</span> that supports the development, improvement, and maintenance of intelligent systems. We combine scalable operational workflows with structured quality assurance to help organizations move from raw data collection to production-ready intelligence.
-            </p>
-          </div>
-        </motion.div>
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: text */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-poppins text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Building the Infrastructure Behind Intelligent Systems
+            </h2>
+            <div className="space-y-4">
+              <p className="font-poppins text-lg text-gray-600 leading-relaxed">
+                Modern AI and autonomous systems depend on large volumes of reliable, structured, and continuously validated data. But many organisations struggle with fragmented workflows, inconsistent labelling quality, poor validation processes, and limited operational capacity.
+              </p>
+              <p className="font-poppins text-lg text-gray-600 leading-relaxed">
+                BigCradle provides the <span className="font-semibold text-gray-900">high-integrity, high-quality contextual data</span> that supports the development, improvement, and maintenance of intelligent systems. We combine scalable operational workflows with structured quality assurance to help organizations move from raw data collection to production-ready intelligence.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Right: data pipeline diagram — place your image at public/images/data-pipeline-diagram.jpg */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            <div
+              className="relative w-full rounded-2xl shadow-lg overflow-hidden"
+              style={{ minHeight: "340px", background: "#f0f6ff" }}
+            >
+              <Image
+                src="/images/data-pipeline-diagram.jpg"
+                alt="Data pipeline diagram showing raw data flowing through validation, annotation, and delivery stages"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -273,31 +320,46 @@ function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow"
+              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow"
             >
-              <div className="h-16 w-16 rounded-xl bg-gradient-to-br from-[#0D8AFF] to-[#3C6FE3] flex items-center justify-center text-white mb-6">
-                {service.icon}
+              <div
+                className="relative w-full overflow-hidden"
+                style={{ height: "180px", background: "#e8f4ff" }}
+              >
+                <Image
+                  src={`/images/service-${
+                    ["data-annotation", "model-evaluation", "data-validation"][index]
+                  }.jpg`}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <h3 className="font-poppins text-2xl font-bold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="font-poppins text-gray-600 leading-relaxed mb-6">
-                {service.description}
-              </p>
-              <div className="border-t border-gray-100 pt-6">
-                <h4 className="font-poppins text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">
-                  Capabilities
-                </h4>
-                <ul className="space-y-2">
-                  {service.capabilities.map((cap, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-[#0D8AFF] shrink-0 mt-0.5" />
-                      <span className="font-poppins text-sm text-gray-600">
-                        {cap}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="p-8">
+                <div className="h-16 w-16 rounded-xl bg-gradient-to-br from-[#0D8AFF] to-[#3C6FE3] flex items-center justify-center text-white mb-6">
+                  {service.icon}
+                </div>
+                <h3 className="font-poppins text-2xl font-bold text-gray-900 mb-4">
+                  {service.title}
+                </h3>
+                <p className="font-poppins text-gray-600 leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                <div className="border-t border-gray-100 pt-6">
+                  <h4 className="font-poppins text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">
+                    Capabilities
+                  </h4>
+                  <ul className="space-y-2">
+                    {service.capabilities.map((cap, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-[#0D8AFF] shrink-0 mt-0.5" />
+                        <span className="font-poppins text-sm text-gray-600">
+                          {cap}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -422,6 +484,27 @@ function ProcessSection() {
             BigCradle Annotation Flow
           </h2>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mb-12"
+        >
+          <div
+            className="relative w-full rounded-2xl shadow-md overflow-hidden"
+            style={{ height: "320px", background: "#f5f9ff" }}
+          >
+            <Image
+              src="/images/annotation-workflow.jpg"
+              alt="Four-step BigCradle annotation workflow: team alignment, expert consultation, annotation & review, delivery & support"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </motion.div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((item, index) => (
             <motion.div
@@ -540,14 +623,27 @@ function FutureSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-[#0D8AFF] to-[#3C6FE3] rounded-3xl p-8 md:p-12 text-center"
+          className="bg-gradient-to-br from-[#0D8AFF] to-[#3C6FE3] rounded-3xl overflow-hidden"
         >
-          <h2 className="font-poppins text-3xl md:text-4xl font-bold text-white mb-6">
-            Supporting the Next Generation of Intelligent Technologies
-          </h2>
-          <p className="font-poppins text-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
-            As AI and autonomous systems continue to evolve, the demand for reliable, high-integrity, and highly contextual data will only increase. BigCradle is building the infrastructure and operational workflows needed to support this future — enabling organizations to scale intelligent technologies with confidence.
-          </p>
+          <div
+            className="relative w-full overflow-hidden"
+            style={{ height: "220px", background: "#1a6fd4" }}
+          >
+            <Image
+              src="/images/data-future-visual.jpg"
+              alt="Abstract visualization of AI and data infrastructure powering the next generation of intelligent technologies"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-8 md:p-12 text-center">
+            <h2 className="font-poppins text-3xl md:text-4xl font-bold text-white mb-6">
+              Supporting the Next Generation of Intelligent Technologies
+            </h2>
+            <p className="font-poppins text-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
+              As AI and autonomous systems continue to evolve, the demand for reliable, high-integrity, and highly contextual data will only increase. BigCradle is building the infrastructure and operational workflows needed to support this future — enabling organizations to scale intelligent technologies with confidence.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
